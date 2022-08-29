@@ -1,9 +1,8 @@
-<!doctype html>
 <html>
 
 <head>
 <meta charset="utf-8">
-<title>Brython 演示</title>
+<title>Brython demo</title>
 <style>
 body{
     font-size: 14px;
@@ -133,7 +132,7 @@ span.python-builtin{
 
 <body onload="brython({debug: 1, indexedDB: false})">
 
-<h1 style="text-align: center"><a href="http://brython.info" target="_blank" class="external">Brython</a></h1>
+<h1 style="text-align: center">Introduction to <a href="http://brython.info" target="_blank" class="external">Brython</a></h1>
 <div style="display:table; width:100%;">
   <div style="display: table-row">
     <div style="display: table-cell; width:20%; vertical-align: top;">
@@ -141,14 +140,25 @@ span.python-builtin{
       </ul>
     </div>
     <div style="" id="panel">
-      <div id="intro">
-        <p>本页展示了一些如何使用 Python 作为脚本语言与网页交互的示例：创建新元素、访问和修改现有元素、创建图形、动画、发送 Ajax 请求等。
-        <p>脚本使用由 W3C 定义的文档对象模型 (DOM) 中描述的对象 - 页面中显示的元素、应用于这些元素的样式、事件等。 此页面中使用的参考资料是&nbsp;
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank" class="external">Mozilla 开发人员网络</a>
-        &nbsp;(Mozilla Developer Network - MDN) 文档。
-        <p>尽管 DOM 本质上与语言无关，但 MDN 文档中的大多数示例都是用 Javascript 编写的，而（还 ;-）不是用 Python 编写的。 翻译通常很简单，因为 Brython 支持所有 DOM 类型及其属性和方法。
-        <p>在某些情况下，Brython 添加了更多 Pythonic 语法：您将通过浏览示例来发现它们。
-        <p>更多文档和示例可以在 <a href="http://brython.info" target="_blank" class="external">Brython 网站</a>上找到。
+      <div id="home">
+        <p>This page shows a few examples of how you can interact with a web
+        page using Python as the scripting language : create new elements,
+        access and modify existing elements, create graphics, animations, send
+        Ajax requests, etc.
+        <p>The scripts use objects - elements shown in the page, styles
+        applied to these elements, events, etc. - that are described in the
+        Document Object Model (DOM), defined by the W3C. The reference used in
+        this page is the
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank" class="external">Mozilla Developer Network</a>
+        (MDN) documentation.
+        <p>Although the DOM is by nature language-independant, most examples
+        in the MDN documentation are written with Javascript, not
+        (yet&nbsp;;-) in Python. The translation is usually straightforward,
+        since Brython supports all the DOM types and their attributes and methods.
+        <p>In some cases, Brython adds a more Pythonic syntax : you will discover
+        them by browsing the examples.
+        <p>More documentation and examples can be found on the
+        <a href="http://brython.info" target="_blank" class="external">Brython site</a>.
       </div>
     </div>
   </div>
@@ -156,7 +166,7 @@ span.python-builtin{
 
 
 <div class="example" id="ex0">
-    <button id="button_alert">显示警告框</button>
+    <button id="button_alert">display an alert box</button>
 
     <script type="text/python" id="script0">
     from browser import document, alert
@@ -171,27 +181,32 @@ span.python-builtin{
     <pre class="python"></pre>
 
     <p><span class="comment">
-    <code>browser</code> 是一个 Brython 特定的模块，它定义了用于与页面交互的对象。
-    <p><code>document</code> 是一个代表 HTML 文档的对象；
-    <code>document[element_id]</code> 是属性 id 等于 element_id 的元素。在此示例中，
-    <code>document["button0"]</code> 是对您单击的按钮的引用。
-    <p><code>bind(<i>event, function</i>)</code> 是一个元素的方法，它接受两个参数，
-    事件的名称和当事件发生在元素上时要调用的函数。 当用户点击元素时，此事件称为“click”。 
-    代码的意思是：当用户点击元素（这里是“显示警告框”按钮）时，调用函数<code>hello</code>。 
-    该函数接受一个参数，即事件的对象。
-    <p><code>alert</code> 用于显示小的弹出窗口。
+    <code>browser</code> is a Brython-specific module that defines the objects
+    used to interact with the page.
+    <p><code>document</code> is an object representing the HTML document ;
+    <code>document[element_id]</code> is the element with attribute id equal
+    to element_id. In this example, <code>document["button0"]</code> is a
+    reference to the button you click on.
+    <p><code>bind(<i>event, function</i>)</code> is a method of elements that
+    takes two arguments, the name of an event and the function to call when
+    the event occurs on the element. When the user clicks on the element, this
+    event is called "click". The code means : when the user clicks on the
+    element (here, the button with the text "display an alert box"), call the
+    function <code>hello</code>.
+    The function takes one argument, an object representing the event.
+    <p><code>alert</code> is used to display small popup windows.
     </span>
 </div>
 
 <div class="example" id="ex_dialog">
-    <button id="button_dialog">显示弹出窗口</button>
+    <button id="button_dialog">display a popup window</button>
 
     <script type="text/python" id="script_dailog">
     from browser import document
     from browser.widgets.dialog import InfoDialog
 
     def hello(ev):
-        InfoDialog("弹窗", "Hello world!", left=ev.x, top=ev.y)
+        InfoDialog("Demo", "Hello world !", left=ev.x, top=ev.y)
 
     document["button_dialog"].bind("click", hello)
     </script>
@@ -200,20 +215,23 @@ span.python-builtin{
     <pre class="python"></pre>
 
     <p><span class="comment">
-    您可以使用内置模块 <code class="module">browser.widgets.dialog</code> 提供的对话框来代替浏览器警告框。
-    <p>在这里，框通过关键字参数<code>left</code> 和 <code>top</code> 定位在鼠标位置（由事件对象的属性 <code>x</code> 和 <code>y</code> 给出）。
+    Instead of the browser alert box, you can use a dialog box provided
+    by the built-in module <code class="module">browser.widgets.dialog</code>.
+    <p>Here, the box is positioned at the mouse position (given by the attributes
+    <code>x</code> and <code>y</code> of the event object) by keyword arguments
+    <code>left</code> and <code>top</code>.
     </span>
 </div>
 
 <div class="example" id="ex1">
-    <button id="button1">改变元素中的文字</button>
-    <span id="zone1" class="zone">初始内容</span>
+    <button id="button1">change the text of an element</button>
+    <span id="zone1" class="zone">Initial content</span>
 
     <script type="text/python" id="script1">
     from browser import document
 
     def change(event):
-        document["zone1"].textContent = "改变后的内容"
+        document["zone1"].textContent = "New content"
 
     document["button1"].bind("click", change)
     </script>
@@ -223,12 +241,18 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    元素的属性和方法在文档对象模型 (DOM) 中进行了描述，该模型有大量文档（例如 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" class="external">Mozilla</a>）。
-    <p><code>textContent</code> 是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank" class="external">Node</a> 实例的属性； 它用于获取或设置元素的文本内容。
-    <p>Brython 支持所有 DOM 方法和属性； 对于文本内容，它提供了一个快捷方式，<code>text</code>，因此也可以编写函数体：Brython supports all the DOM methods and attributes ; for text content
+    The attributes and methods of the elements are described in the Document
+    Object Model (DOM), which is abundantly documented (by
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" class="external">Mozilla</a>
+    for instance).
+    <p><code>textContent</code> is an attribute of
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank" class="external">Node</a> instances ; it is used to get or set an element's text content.
+    <p>Brython supports all the DOM methods and attributes ; for text content
+    it provides a shortcut, <code>text</code>, so that the function body can
+    also be written :
     <pre class="python">
     def change(event):
-        document["zone1"].text = "改变后的内容"
+        document["zone1"].text = "New Content"
     </pre>
 </code>
 </span>
@@ -1183,7 +1207,7 @@ def home(ev):
     document[example_id].style.display="block"
     current = example_id
 
-anchor = html.A("home", Class="menu", href="#", id="ahome")
+anchor = html.A("Home", Class="menu", href="#", id="ahome")
 anchor.bind("click", home)
 
 document["menu"] <= html.LI(anchor)
@@ -1235,8 +1259,8 @@ for example in document.get(selector=".example"):
     example.style.display = "none"
 
 </script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
+<script src="brython.js"></script>
+<script src="brython_stdlib.js"></script>
 
 </body>
 
