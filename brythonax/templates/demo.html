@@ -1170,24 +1170,24 @@ from browser import document, html, highlight
 
 # create first menu entry
 
-def home(ev):
+def intro(ev):
     global current
     if current is not None:
         document[current].style.display = "none"
         document <= document[current]
         document["a"+current].style.fontWeight = "normal"
-    example_id = "home"
+    example_id = "intro"
     ev.target.style.fontWeight = "bold"
     document["panel"].clear()
     document["panel"] <= document[example_id]
     document[example_id].style.display="block"
     current = example_id
 
-anchor = html.A("home", Class="menu", href="#", id="ahome")
-anchor.bind("click", home)
+anchor = html.A("intro", Class="menu", href="#", id="ahome")
+anchor.bind("click", intro)
 
 document["menu"] <= html.LI(anchor)
-current = "home"
+current = "intro"
 
 def load_example(ev):
     global current
