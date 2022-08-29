@@ -31,3 +31,4 @@
    3. `heroku git:remote -a brythonax`
    4. `git add requirements.txt Procfile note.md brythonax`
    5. `git commit -m first_commit`
+   6. `git push heroku master`
