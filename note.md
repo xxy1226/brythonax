@@ -29,4 +29,5 @@
    1. `heroku login`
    2. `git init`
    3. `heroku git:remote -a brythonax`
-   4. 
+   4. `git add requirements.txt Procfile note.md brythonax`
+   5. `git commit -m first_commit`
