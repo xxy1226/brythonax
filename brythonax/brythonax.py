@@ -11,3 +11,7 @@ def home():
 def demo():
     return render_template('demo.html')
 
+@bp.route('/leetcode')
+def leetcode():
+    return render_template('LeetCode.html')
+

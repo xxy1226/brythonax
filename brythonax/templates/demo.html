@@ -235,8 +235,8 @@ span.python-builtin{
 </div>
 
 <div class="example" id="ex2">
-    <button id="button2">change the style of an element</button>
-    <span id="zone2" style="color:blue;background-color:#aad;" class="zone">coloured content</span>
+    <button id="button2">改变元素的样式</button>
+    <span id="zone2" style="color:blue;background-color:#aad;" class="zone">元素样式</span>
 
     <script type="text/python" id="script2">
     from browser import document
@@ -259,16 +259,16 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    Elements have an attribute <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style" target="_blank"><code>style</code></a>, which itself has (among many others) the attributes <code>color</code> (text color), <code>backgroundColor</code> (background color), <code>fontWeight</code> ("bold" or "normal"), <code>fontSize</code> (size of the letters, in pixels), etc.
-    <p>Look <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank" class="external">here</a> for a reference on CSS.
-    <p>Note that the attribute names that have a hyphen is CSS are written in camelCase in Python code : for instance, to set the CSS attribute <code>background-color</code>, the syntax is <code>style.backgroundColor</code>
+    元素有一个属性样式 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style" target="_blank"><code>style</code></a>，它本身（除其他外）有 <code>color</code>（文本颜色）、<code>backgroundColor</code> （背景颜色）, <code>fontWeight</code> （“粗体”或“正常”）, <code>fontSize</code>（字母大小，以像素为单位）、 等等
+    <p>在<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank" class="external">此处</a>查找有关 CSS 的参考。
+    <p>请注意，带有连字符的属性名称是 CSS 在 Python 代码中以驼峰命名法编写：例如，要设置 CSS 属性 <code>background-color</code>，语法为 <code>style.backgroundColor</code>
     </span>
 
 </div>
 
 <div class="example" id="ex_class">
-    <button id="button_class">change the class of an element</button>
-    <span id="zone_class" style="color:blue;background-color:#aad;" class="zone">a random text</span>
+    <button id="button_class">改变元素的类</button>
+    <span id="zone_class" style="color:blue;background-color:#aad;" class="zone">文本</span>
 
     <script type="text/python" id="script_class">
     from browser import document
@@ -292,15 +292,19 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    Elements have an attribute <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank" class="external"><code>classList</code></a> with the values set in the attribute <code>class</code> of the element.
-    <p>It is an instance of the class <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList" target="_blank" class="external"><code>DOMTokenList</code></a>, which supports the methods <code>add()</code> and <code>remove()</code>.
+    元素有一个属性 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank" class="external"><code>classList</code></a>，
+    其值在元素的属性 <code>class</code> 中设置。
+    <p>它是类 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList" target="_blank" class="external"><code>DOMTokenList</code></a> 
+    的一个实例，它支持方法 <code>add()</code> and <code>remove()</code>。
     </span>
 
 </div>
 
 
 <div class="example" id="ex3">
-    <button id="button3">hide or show an element</button>
+    <button id="button3">隐藏或显示元素</button>
     <span id="zone3" class="zone">on / off</span>
 
     <script type="text/python"  id="script3">
@@ -318,25 +322,21 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    <code>display</code> is another attribute of <code>style</code>. Setting it to <code>"none"</code> hides the element.
-    <p>Note that in this example, we use a variant of the syntax to bind
-    events to functions. Instead of the form we had seen before, which uses
-    the <i>method</i> <code>bind</code> of DOM elements, here we use the
-    <i>function</i> bind defined in module <code>browser</code>. It is used
-    as a decorator for the callback function, and takes two parameters:
+    <code>display</code> 是 <code>style</code> 的另一个属性。 将其设置为 <code>"none"</code> 会隐藏元素。
+    <p>请注意，在此示例中，我们使用语法的变体将事件绑定到函数。 与我们之前看到的
+    使用 DOM 元素的 <i>方法method</i> <code>bind</code> 的表单不同，这里我们使用模块浏览器中定义的<i>函数function</i> <code>bind</code>。 
+    它用作回调函数的装饰器，并接受两个参数：
     <ul>
-    <li>- an identifier of the element(s) to bind : either a reference to the
-    element, or a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
-    class="external">CSS selector</a> (here, the selector "#button3" refers to the
-    button)
-    <li>- the event name
+    <li>- 要绑定的元素的标识符：对元素的引用或 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+        class="external">CSS 选择器</a>（这里，选择器“#button3”指的是按钮）
+    <li>- 事件名称
     </ul>
     </span>
 </div>
 
 <div class="example" id="ex6_std">
-    <button id="button6_std">insert an element (standard DOM methods)</button>
-    <span id="zone6_std" class="zone">initial content</span>
+    <button id="button6_std">插入一个元素（标准 DOM 方法）</button>
+    <span id="zone6_std" class="zone">初始内容</span>
 
     <script type="text/python" id="script6_std">
     from browser import document, html
@@ -359,9 +359,9 @@ span.python-builtin{
     <pre class="python"></pre>
     <p>
 
-    <span class="comment">This example uses the standard DOM methods to create elements (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank" class="external"><code>document.createElement()</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode" target="_blank" class="external"><code>createTextNode()</code></a>) and append them to other elements or to the document (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank"><code>Node.appendChild()</code></a>).
-    <p>Note that on the last line, we use the standard DOM method <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank" class="external"><code>EventTarget.addEventListener()</code></a> : the method <code>bind()</code> used in the other examples is Brython-specific.
-    <p>Also note the use of f-string for string formatting (<a href="https://www.python.org/dev/peps/pep-0498/" target="_blank" class="external">PEP 448</a>, introduced in Python 3.6) in the line
+    <span class="comment">此示例使用标准 DOM 方法创建元素（<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank" class="external"><code>document.createElement()</code></a>、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode" target="_blank" class="external"><code>createTextNode()</code></a>）并将它们附加到其他元素或文档（<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank"><code>Node.appendChild()</code></a>）。
+    <p>请注意，在最后一行，我们使用标准 DOM 方法 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank" class="external"><code>EventTarget.addEventListener()</code></a> ：其他示例中使用的方法 <code>bind()</code> 是 Brython 特定的。
+    <p>还要注意在行中使用 f-string 进行字符串格式化（<a href="https://www.python.org/dev/peps/pep-0498/" target="_blank" class="external">PEP 448</a>，在 Python 3.6 中引入）
     <pre class="python">
 
         txt = document.createTextNode(f" {nb}")
@@ -1175,9 +1175,9 @@ def intro(ev):
     if current is not None:
         document[current].style.display = "none"
         document <= document[current]
-        document["a"+current].style.fontWeight = "normal"
+        document["a"+current].classList.remove("selected")
     example_id = "intro"
-    ev.target.style.fontWeight = "bold"
+    ev.target.classList.add("selected")
     document["panel"].clear()
     document["panel"] <= document[example_id]
     document[example_id].style.display="block"
