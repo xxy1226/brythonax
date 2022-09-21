@@ -16,10 +16,6 @@ def demo():
 def leetcode():
     return render_template('LeetCode.html')
 
-@bp.route('/unleetcode')
-def leetcode():
-    return render_template('unLeetCode.html')
-
 @bp.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(bp.root_path, 'static'),
