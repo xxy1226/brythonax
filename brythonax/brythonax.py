@@ -1,12 +1,12 @@
-from flask import render_template, Blueprint, url_for, send_from_directory
+from flask import render_template, Blueprint, url_for, send_from_directory, request
 import os
 
 bp = Blueprint('brythonax', __name__)
 
-@bp.route('/')
-@bp.route('/home')
+@bp.route('/', method = ['GET'])
 def home():
-    return render_template('index.html')
+    if request.method == 'GET':
+        return render_template('index.html')
 
 @bp.route('/demo')
 def demo():

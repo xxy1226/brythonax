@@ -167,42 +167,30 @@ span.python-builtin{
   </div>
 </div>
 
-<div class="exercise" id="ex967">
-    <question id="967" hidden>967. Numbers With Same Consecutive Differences 连续差相同的数字</question>
-    <question class="en">967. Numbers With Same Consecutive Differences</question>
-    <question class="cn">967. 连续差相同的数字</question>
+<div class="exercise" id="ex985">
+    <question id="985" hidden>985.Sum of Even Numbers After Queries 查询后的偶数和</question>
+    <question class="en">985. Sum of Even Numbers After Queries</question>
+    <question class="cn">985.  查询后的偶数和</question>
     <p class="difficulty_m">Medium</p>
 
     <script type="text/python" id="script967">
     from typing import List
     
     class Solution:
-        def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
-            arr=[]
-            for i in range(9):
-                num=i+1
-                self.process(arr,n,k,num)
-            return arr
-        
-        def process(self,arr,n,k,num):
-            if int(num / 10**(n-2)) > 0:
-                if num%10-k>=0:
-                    arr.append(num*10+num%10-k)
-                if num%10+k<10 and k!=0:
-                    arr.append(num*10+num%10+k)
-                return
-            if num%10-k>=0:
-                self.process(arr,n,k,num*10+num%10-k)
-            if num%10+k<10 and k!=0:
-                self.process(arr,n,k,num*10+num%10+k)
+        def 
     </script>
 
-    <p class="en">Return all <b>non-negative</b> integers of length <code>n</code> such that the absolute difference between every two consecutive digits is <code>k</code>.</p>
-    <p class="cn">返回所有长度为 <code>n</code> 且满足其每两个连续位上的数字之间的差的绝对值为 <code>k</code> 的 <b>非负整数</b> 。</p>
-    <p class="en">Note that <b>every</b> number in the answer <b>must not</b> have leading zeros. For example, <code>01</code> has one leading zero and is invalid.</p>
-    <p class="cn">请注意，<b>除了</b> 数字 <code>0</code> 本身之外，答案中的每个数字都 <b>不能</b> 有前导零。例如，<code>01</code> 有一个前导零，所以是无效的；但 <code>0</code> 是有效的。</p>
-    <p class="en">You may return the answer in <b>any order</b>.</p>
-    <p class="cn">你可以按 <b>任何顺序</b> 返回答案。</p>
+    <div class="en">
+    <p>You are given an integer array <code>nums</code> and an array <code>queries</code> where <code>queries[i] = [val<sub>i</sub>, index<sub>i</sub>]</code>.</p>
+    <p>For each query <code>i</code>, first, apply <code>nums[index<sub>i</sub>] = nums[index<sub>i</sub>] + val<sub>i</sub><code>, then print the sum of the even values of <code>nums</code>.</p>
+    <p>Return <I>an integer array</I> <code>answer</code> <I>where</I> <code>answer[i]</code> <I>is the answer to the</I> <code>i<sup>th</sup></code> <I>query</I>.</p>
+    </div>
+    <div class="cn">
+    <p>给出一个整数数组 <code>A</code> 和一个查询数组 <code>queries</code>。</p>
+    <p>对于第 <code>i</code> 次查询，有 <code>val = queries[i][0], index = queries[i][1]</code>，我们会把 <code>val</code> 加到 <code>A[index]</code> 上。然后，第 <code>i</code> 次查询的答案是 <code>A</code> 中偶数值的和。</p>
+    <p><I>（此处给定的 <code>index = queries[i][1]</code> 是从 0 开始的索引，每次查询都会永久修改数组 <code>A</code>。）</I></p>
+    <p>返回所有查询的答案。你的答案应当以数组 <code>answer</code> 给出，<code>answer[i]</code> 为第 <code>i</code> 次查询的答案。</p>
+    </div>
     <br>
     <p class="en"><b>Example 1:</b></p>
     <p class="cn"><b>示例 1:</b></p>
@@ -267,126 +255,6 @@ span.python-builtin{
     <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
     <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
 </div>
-
-<div class="exercise" id="ex987">
-    <question id="967" hidden>987. Vertical Order Traversal of a Binary Tree 二叉树的垂序遍历</question>
-    <question class="en">987. Vertical Order Traversal of a Binary Tree</question>
-    <question class="cn">987. 二叉树的垂序遍历</question>
-    <p class="en difficulty_h">Hard</p>
-    <p class="cn difficulty_h">困难</p>
-
-    <script type="text/python" id="script987">
-    
-    </script>
-
-    <div class="en">
-        <p>Given the <code>root</code> of a binary tree, calculate the <b>vertical order traversal</b> of the binary tree.</p>
-        <p>For each node at position <code>(row, col)</code>, its left and right children will be at positions <code>(row + 1, col - 1)</code> and <code>(row + 1, col + 1)</code> respectively. The root of the tree is at <code>(0, 0)</code>.</p>
-        <p>The <b>vertical order traversal</b> of a binary tree is a list of top-to-bottom orderings for each column index starting from the leftmost column and ending on the rightmost column. There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.</p>
-        <p>Return the <b>vertical order traversal</b> of the binary tree.</p>
-    </div>
-
-    <div class="cn">
-        <p>给你二叉树的根结点 <code>root</code> ，请你设计算法计算二叉树的 <b>垂序遍历</b> 序列。</p>
-        <p>对位于 <code>(row, col)</code> 的每个结点而言，其左右子结点分别位于 <code>(row + 1, col - 1)</code> 和 <code>(row + 1, col + 1)</code> 。树的根结点位于 <code>(0, 0)</code> 。</p>
-        <p>二叉树的 <b>垂序遍历</b> 从最左边的列开始直到最右边的列结束，按列索引每一列上的所有结点，形成一个按出现位置从上到下排序的有序列表。如果同行同列上有多个结点，则按结点的值从小到大进行排序。</p>
-        <p>返回二叉树的 <b>垂序遍历</b> 序列。</p>
-    </div>
-
-    <br>
-    <p class="en"><b>Example 1:</b></p>
-    <p class="cn"><b>示例 1:</b></p>
-    <img src="{{ url_for('static', filename='987/987_1.bmp') }}" alt="987_1">
-    <div class="examples en">
-        <p><b>Input:</b> root = [3,9,20,null,null,15,7]  
-        <p><b>Output:</b> [[9],[3,15],[20],[7]]
-        <p><b>Explanation:</b> </p>
-        <p>Column -1: Only node 9 is in this column.</p>
-        <p>Column 0: Nodes 3 and 15 are in this column in that order from top to bottom.</p>
-        <p>Column 1: Only node 20 is in this column.</p>
-        <p>Column 2: Only node 7 is in this column.</p>
-    </div>
-    <div class="examples cn">
-        <p><b>输入:</b> root = [3,9,20,null,null,15,7]</p>
-        <p><b>输出:</b> [[9],[3,15],[20],[7]]</p>
-        <p><b>解释:</b></p>
-        <p>列 -1 ：只有结点 9 在此列中。</p>
-        <p>列  0 ：只有结点 3 和 15 在此列中，按从上到下顺序。</p>
-        <p>列  1 ：只有结点 20 在此列中。</p>
-        <p>列  2 ：只有结点 7 在此列中。</p>
-    </div>
-
-    <p class="en"><b>Example 2:</b></p>
-    <p class="cn"><b>示例 2:</b></p>
-    <img src="{{ url_for('static', filename='987/987_2.bmp') }}" alt="987_2">
-    <div class="examples en">
-        <p><b>Input:</b> root = [1,2,3,4,5,6,7]  </p>
-        <p><b>Output:</b> [[4],[2],[1,5,6],[3],[7]]</p>
-        <p><b>Explanation:</b> </p>
-        <p>Column -2: Only node 4 is in this column.</p>
-        <p>Column -1: Only node 2 is in this column.</p>
-        <p>Column 0: Nodes 1, 5, and 6 are in this column.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 is at the top, so it comes first.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 and 6 are at the same position (2, 0), so we order them by their value, 5 before 6.</p>
-        <p>Column 1: Only node 3 is in this column.</p>
-        <p>Column 2: Only node 7 is in this column.</p>
-    </div>
-    <div class="examples cn">
-        <p><b>输入:</b> root = [1,2,3,4,5,6,7]</p>
-        <p><b>输出:</b> [[4],[2],[1,5,6],[3],[7]]</p>
-        <p><b>解释:</b> </p>
-        <p>列 -2 ：只有结点 4 在此列中。</p>
-        <p>列 -1 ：只有结点 2 在此列中。</p>
-        <p>列  0 ：结点 1 、5 和 6 都在此列中。</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 在上面，所以它出现在前面。</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 和 6 位置都是 (2, 0) ，所以按值从小到大排序，</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 在 6 的前面。</p>
-        <p>列  1 ：只有结点 3 在此列中。</p>
-        <p>列  2 ：只有结点 7 在此列中。</p>
-    </div>
-
-    <p class="en"><b>Example 3:</b></p>
-    <p class="cn"><b>示例 3:</b></p>
-    <img src="{{ url_for('static', filename='987/987_2.bmp') }}" alt="987_2">
-    <div class="examples en">
-        <p><b>Input:</b> root = [1,2,3,4,6,5,7]</p>
-        <p><b>Output:</b> [[4],[2],[1,5,6],[3],[7]]</p>
-        <p><b>Explanation:</b> </p>
-        <p>This case is the exact same as example 2, but with nodes 5 and 6 swapped.</p>
-        <p>Note that the solution remains the same since 5 and 6 are in the same location and should be ordered by their values.</p>
-    </div>
-    <div class="examples cn">
-        <p><b>输入:</b> root = [1,2,3,4,6,5,7]</p>
-        <p><b>输出:</b> [[4],[2],[1,5,6],[3],[7]]</p>
-        <p><b>解释:</b> </p>
-        <p>这个示例实际上与示例 2 完全相同，只是结点 5 和 6 在树中的位置发生了交换。</p>
-        <p>因为 5 和 6 的位置仍然相同，所以答案保持不变，仍然按值从小到大排序。</p>
-    </div>
-
-    <div class="en">
-        <p><b>Constraints:</b></p>
-        <ul>
-            <li>The number of nodes in the tree is in the range <code>[1, 1000]</code>.</li>
-            <li><code>0 <= Node.val <= 1000</code>.</li>
-        </ul>
-    </div>
-    <div class="cn">
-        <p><b>提示:</b></p>
-        <ul>
-            <li>树中结点数目总数在范围 <code>[1, 1000]</code> 内.</li>
-            <li><code>0 <= Node.val <= 1000</code>.</li>
-        </ul>
-    </div>
-
-    <pre class="python"></pre>
-
-    <p><span class="comment">
-    </span></p>
-    <p><b>Result:</b></p>
-    <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
-    <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
-</div>
-
 
 <script type="text/python">
 from browser import document, html, highlight, alert
