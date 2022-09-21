@@ -32,3 +32,6 @@
    4. `git add requirements.txt Procfile note.md brythonax`
    5. `git commit -m first_commit`
    6. `git push heroku master`
+
+# 打开网页
+https://brythonax.herokuapp.com
