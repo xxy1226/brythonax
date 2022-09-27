@@ -95,6 +95,7 @@ code{
     color: #113;
     padding-left: 0.2em;
     padding-right: 0.2em;
+    background: #ddd;
 }
 
 code.file{
@@ -171,7 +172,12 @@ span.python-builtin{
     <question id="967" hidden>967. Numbers With Same Consecutive Differences 连续差相同的数字</question>
     <question class="en">967. Numbers With Same Consecutive Differences</question>
     <question class="cn">967. 连续差相同的数字</question>
+<<<<<<< HEAD
     <p class="difficulty_m">Medium</p>
+=======
+    <p class="en difficulty_m">Medium</p>
+    <p class="cn difficulty_m">中等</p>
+>>>>>>> dev
 
     <script type="text/python" id="script967">
     from typing import List
@@ -184,6 +190,7 @@ span.python-builtin{
                 self.process(arr,n,k,num)
             return arr
         
+<<<<<<< HEAD
         def process(self,arr,n,k,num):
             if int(num / 10**(n-2)) > 0:
                 if num%10-k>=0:
@@ -203,12 +210,46 @@ span.python-builtin{
     <p class="cn">请注意，<b>除了</b> 数字 <code>0</code> 本身之外，答案中的每个数字都 <b>不能</b> 有前导零。例如，<code>01</code> 有一个前导零，所以是无效的；但 <code>0</code> 是有效的。</p>
     <p class="en">You may return the answer in <b>any order</b>.</p>
     <p class="cn">你可以按 <b>任何顺序</b> 返回答案。</p>
+=======
+        def process(arr: List[int], n: int, k: int, num: int):
+            if int(num / 10**(n - 2)) > 0: 
+                # Check if the process is generating the last digit.
+                if num % 10 - k >= 0:
+                    # Append the -k digit to the end.
+                    arr.append(num * 10 + num % 10 - k) 
+                if num % 10 + k < 10 and k != 0:
+                    # Append the +k digit to the end.
+                    arr.append(num * 10 + num % 10 + k) 
+                return
+            if num % 10 - k >= 0:
+                # Append the -k digit to the end and generate next digit.
+                process(arr, n, k, num * 10 + num % 10 - k)
+            if num % 10 + k < 10 and k != 0:
+                # Append the +k digit to the end and generate next digit.
+                process(arr, n, k, num * 10 + num % 10 + k) 
+    </script>
+
+    <div class="en">
+        <p>Return all <b>non-negative</b> integers of length <code>n</code> such that the absolute difference between every two consecutive digits is <code>k</code>.</p>
+        <p>Note that <b>every</b> number in the answer <b>must not</b> have leading zeros. For example, <code>01</code> has one leading zero and is invalid.</p>
+        <p>You may return the answer in <b>any order</b>.</p>
+    </div>
+    <div class="cn">
+        <p class="cn">返回所有长度为 <code>n</code> 且满足其每两个连续位上的数字之间的差的绝对值为 <code>k</code> 的 <b>非负整数</b> 。</p>
+        <p class="cn">请注意，<b>除了</b> 数字 <code>0</code> 本身之外，答案中的每个数字都 <b>不能</b> 有前导零。例如，<code>01</code> 有一个前导零，所以是无效的；但 <code>0</code> 是有效的。</p>
+        <p class="cn">你可以按 <b>任何顺序</b> 返回答案。</p>
+    </div>
+>>>>>>> dev
     <br>
     <p class="en"><b>Example 1:</b></p>
     <p class="cn"><b>示例 1:</b></p>
     <div class="examples en">
         <p><b>Input:</b> n = 3, k = 7</p>
+<<<<<<< HEAD
         <p><b>Output:</b> [181,292,707,818,929] </p>
+=======
+        <p><b>Output:</b> [181,292,707,818,929]</p>
+>>>>>>> dev
         <p><b>Explanation:</b> Note that 070 is not a valid number, because it has leading zeroes.</p>
     </div>
     <div class="examples cn">
@@ -219,7 +260,11 @@ span.python-builtin{
     <p class="en"><b>Example 2:</b></p>
     <p class="cn"><b>示例 2:</b></p>
     <div class="examples en">
+<<<<<<< HEAD
         <p><b>Input:</b> n = 2, k = 1</p> 
+=======
+        <p><b>Input:</b> n = 2, k = 1</p>
+>>>>>>> dev
         <p><b>Output:</b> [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]</p>
     </div>
     <div class="examples cn">
@@ -235,24 +280,27 @@ span.python-builtin{
 
     <pre class="python"></pre>
 
-    <p><span class="comment">
-        <p class="en">There is no repeated calculation, so brute force recursion is good enough, and no dynamic programming is required.</p>
-        <p class="cn">这里没有重复的计算，使用暴力递归即可，无需动态规划。</p>
-        <p class="en"><b>My train of thought:</b></p>
-        <p class="cn"><b>我的思路:</b></p>
-        <p class="en">Repeatedly generate the first non-zero number (1 - 9), and pass it into the recursive function in turn, in the recursion:</p>
-        <p class="cn">重复生成首位非零数（1 - 9），将其依次传入递归函数，在递归中：</p>
-        <ol class="en">
-            <li class="idea">Check if the last digit is currently being generated.</li>
+    <p>
+        <span class="comment en">
+            <p>There is no repeated calculation, so brute force recursion is good enough, and no dynamic programming is required.</p>
+            <p><b>My train of thought:</b></p>
+            <p>Repeatedly generate the first non-zero number (1 - 9), and pass it into the recursive function in turn, in the recursion:</p>
             <ol>
-                <li class="idea"><b>YES:</b> check if a valid +k or -k digit can be generated to the end of the current number.</li>
+                <li class="idea">Check if the last digit is currently being generated.</li>
                 <ol>
-                    <li class="idea"><b>YES:</b> add it to the final list <code>arr</code>.</li>
+                    <li class="idea"><b>YES:</b> check if a valid +k or -k digit can be generated to the end of the current number.</li>
+                    <ol>
+                        <li class="idea"><b>YES:</b> add it to the final list <code>arr</code>.</li>
+                    </ol>
+                    <li class="idea"><b>NO:</b> if a valid +k or -k digit can be generated to the end of the current number, pass the new number into the recursion again.</li>
                 </ol>
-                <li class="idea"><b>NO:</b> if a valid +k or -k digit can be generated to the end of the current number, pass the new number into the recursion again.</li>
             </ol>
-        </ol>
-        <oln class="cn">
+        </span>
+        <span class="comment cn">
+            <p>这里没有重复的计算，使用暴力递归即可，无需动态规划。</p>
+            <p><b>我的思路:</b></p>
+            <p>重复生成首位非零数（1 - 9），将其依次传入递归函数，在递归中：</p>
+        <ol>
             <li class="idea">检查当前是否正在生成最后一位数字</li>
             <ol>
                 <li class="idea"><b>是：</b>检查是否能生成一个比当前末尾 +k 或 -k 的合法数字。</li>
@@ -262,10 +310,18 @@ span.python-builtin{
                 <li class="idea"><b>不是：</b>如果可以在末尾生成合法的 +k 或 -k 数，则将新的数字再次传入递归。</li>
             </ol>
         </ol>
+<<<<<<< HEAD
     </span></p>
     <p><b>Result:</b></p>
     <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
     <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
+=======
+        </span>
+        <p><b>Result:</b></p>
+        <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
+        <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
+    </p>
+>>>>>>> dev
 </div>
 
 
