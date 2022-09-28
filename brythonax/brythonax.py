@@ -38,6 +38,10 @@ def leetcode():
 def unleetcode():
     return render_template('unLeetCode.html')
 
+@bp.route('/test')
+def test():
+    return render_template('test.html')
+
 @bp.route('/language', methods = ['GET'])
 def language():
     set_session_lan(request.args.get('lan'))
