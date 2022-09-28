@@ -68,13 +68,12 @@ div.examples{
 
 pre{
     display: inline-block;
-    padding: 1em;
+    padding: 2em;
     font-family: Consolas, Courier New;
     color: #ff9;
     background-color: #114;
     border-radius: 10px;
     margin-top: 2em;
-    width: 66%;
 }
 
 pre.html{
@@ -88,20 +87,6 @@ pre.html{
     border-color: #333;
     border-style: solid;
     width: 20em;
-}
-
-code{
-    font-family: Consolas, Courier New;
-    color: #113;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    background: #ddd;
-}
-
-code.file{
-    background-color: #fff;
-    font-weigth: bold;
-    font-style: italic;
 }
 
 #moving{
@@ -120,30 +105,11 @@ code.file{
 .down{
     font-size:0.8em;
 }
-
-/* colors for highlighted Python code */
-
-span.python-string{
-    color: #6aa;
-}
-span.python-comment{
-    color: #6a6;
-}
-span.python-keyword{
-    color: #42ebf4;
-}
-span.python-builtin{
-    color: #0f0;
-}
-
-.difficulty_m{
-    color: orange;
-}
-
-.difficulty_h{
-    color: red;
-}
 </style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='code.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
 
 </head>
 
@@ -235,9 +201,9 @@ span.python-builtin{
         <p>You may return the answer in <b>any order</b>.</p>
     </div>
     <div class="cn">
-        <p class="cn">返回所有长度为 <code>n</code> 且满足其每两个连续位上的数字之间的差的绝对值为 <code>k</code> 的 <b>非负整数</b> 。</p>
-        <p class="cn">请注意，<b>除了</b> 数字 <code>0</code> 本身之外，答案中的每个数字都 <b>不能</b> 有前导零。例如，<code>01</code> 有一个前导零，所以是无效的；但 <code>0</code> 是有效的。</p>
-        <p class="cn">你可以按 <b>任何顺序</b> 返回答案。</p>
+        <p>返回所有长度为 <code>n</code> 且满足其每两个连续位上的数字之间的差的绝对值为 <code>k</code> 的 <b>非负整数</b> 。</p>
+        <p>请注意，<b>除了</b> 数字 <code>0</code> 本身之外，答案中的每个数字都 <b>不能</b> 有前导零。例如，<code>01</code> 有一个前导零，所以是无效的；但 <code>0</code> 是有效的。</p>
+        <p>你可以按 <b>任何顺序</b> 返回答案。</p>
     </div>
 >>>>>>> dev
     <br>
@@ -346,7 +312,7 @@ def show(event):
         for element_en in elements_en:
             element_en.style.display = "none"
 
-dropdown = html.SELECT(html.OPTION(l) for l in ["English", "Chinese"])
+dropdown = html.SELECT(html.OPTION(lan) for lan in ["English", "Chinese"])
 dropdown.bind("change", show)
 document["select_language"] <= dropdown
 
@@ -420,8 +386,6 @@ for exercise in document.get(selector=".exercise"):
     exercise.style.display = "none"
 
 </script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
 
 </body>
 

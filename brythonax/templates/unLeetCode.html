@@ -396,7 +396,7 @@ def show(event):
         for element_en in elements_en:
             element_en.style.display = "none"
 
-dropdown = html.SELECT(html.OPTION(l) for l in ["English", "Chinese"])
+dropdown = html.SELECT(html.OPTION(lan) for lan in ["English", "Chinese"])
 dropdown.bind("change", show)
 document["select_language"] <= dropdown
 

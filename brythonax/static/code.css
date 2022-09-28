@@ -1,0 +1,36 @@
+code{
+    font-family: Consolas, Courier New;
+    color: #113;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    background: #ddd;
+}
+
+code.file{
+    background-color: #fff;
+    font-weigth: bold;
+    font-style: italic;
+}
+
+.difficulty_m{
+    color: orange;
+}
+
+.difficulty_h{
+    color: red;
+}
+
+/* colors for highlighted Python code */
+
+span.python-string{
+    color: #6aa;
+}
+span.python-comment{
+    color: #6a6;
+}
+span.python-keyword{
+    color: #42ebf4;
+}
+span.python-builtin{
+    color: #0f0;
+}
