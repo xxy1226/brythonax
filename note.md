@@ -4,6 +4,8 @@
 
 # 安装 Flask 和 Gunicorn
 `pip install flask`
+# 本地运行 Flask
+`flask --app brythonax --debug run`
 
 # 生成文件结构
 `mkdir brythonax`
@@ -18,6 +20,8 @@
 
 # 生成需求库列表
 `pip freeze >> requirements.txt`
+# 使用需求库列表
+`pip install -r requirements.txt`
 
 # 创建 Heroku Procfile 文件
 `echo 'web: gunicorn "bryhonax:create_app()"' >> Procfile`
