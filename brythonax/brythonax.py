@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, url_for, send_from_directory, request, session
+from flask import render_template, Blueprint, url_for, send_from_directory, request, session, jsonify
 import brythonax.settings as settings
 import os
 
@@ -51,3 +51,9 @@ def language():
 def favicon():
     return send_from_directory(os.path.join(bp.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+# Test functions:
+@bp.route('/<string:lan>/json')
+@bp.route('/json')
+def json(lan = "en"):
+    return jsonify(消息="你好世界~") if lan == "cn" else jsonify(message = "Hello world~") 
