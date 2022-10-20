@@ -12,23 +12,24 @@ def remove_session():
     for key in session.keys():
         session.pop(key)
 
-@bp.route('/session/all')
-def print_session():
-    set_session_lan()
-    string = "<ul>"
-    for key in session.keys():
-        string += f"<li>{key} : {session[key]}"+"</li>"
-    string += "</ul>"
-    return string
-
 @bp.route('/')
-@bp.route('/home')
+@bp.route('/<lan>/home')
 def home():
     return render_template('index.html')
 
 @bp.route('/demo')
-def demo():
-    return render_template('demo.html')
+@bp.route('/<lan>/demo')
+def demo(lan='en'):
+    if lan == 'cn':
+        return render_template('cn/demo.html')
+    return render_template('en/demo.html')
+
+@bp.route('/demo')
+@bp.route('/<lan>/demo')
+def doc(lan='en'):
+    if lan == 'cn':
+        return render_template('cn/docs/intro.html')
+    return render_template('en/docs/intro.html')
 
 @bp.route('/leetcode')
 def leetcode():

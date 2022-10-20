@@ -32,3 +32,13 @@
    4. `git add requirements.txt Procfile note.md brythonax`
    5. `git commit -m first_commit`
    6. `git push heroku master`
+
+# 本地 Windows 环境变量设置
+1. 打开 command prompt
+2. 设置 FLASK APP 名称
+   `set FLASK_APP=brythonax`
+3. 设置 开启 DEBUG 模式
+   `set FLASK_DEBUG=1`
+4. 查看变量
+   `echo %FLASK_APP%`
+   `echo %FLASK_DEBUG%`
