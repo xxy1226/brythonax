@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
-<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
 <style>
 .cn{
     display: none;
@@ -24,18 +24,24 @@ h1{
 
 <div id="select_language" style="padding-left: 30px;"></div>
 <div style="padding-left: 15%; padding-right: 15%;">
-<p class="en">Hello, I'm a newbie Pythoner. So I built this website with Python libs (Brython and Flask).</p>
-<p class="en">Here is the demo of <a href="{{ url_for('brythonax.demo') }}">Brython</a>. With Brython, we can execute Python scripts directly in html pages.</p>
-<p class="cn">大家好，我是一个Python爱好者。 所以我用 Python 库（Brython 和 Flask）搭建了这个小站。</p>
-<p class="cn">这里有 <a href="{{ url_for('brythonax.demo') }}">Brython</a> 的演示。 凭借 Brython，我们可以直接在 html 页面中执行 Python 脚本啦。</p>
-<p class="en">Also, I started doing exercises on LeetCode, here is <a href="{{ url_for('brythonax.leetcode') }}">my codes</a>, hope I can stick with it.</p>
-<p class="cn">此外，我开始在 LeetCode 上做练习，这是<a href="{{ url_for('brythonax.leetcode') }}">我的代码</a>，希望我能坚持下去。</p>
-<br>
-<p class="cn">这个网站属于兴趣制作，消磨时间。</p>
-<p class="en">Webmaster: Andreevsky, and his brave friend Mona</p>
-<p class="cn">站长：安德烈夫斯基 和他勇敢的朋友 Mona</p>
-<img src="{{ url_for('static', filename='mona.jpg') }}" alt="Mona Icon">
+    <div class="en">
+        <p >Hello, I'm a newbie Pythoner. So I built this website with Python libs (Brython and Flask).</p>
+        <p>Here is the <a href="{{ url_for('brythonax.doc') }}">document</a> and <a href="{{ url_for('brythonax.demo') }}">demos</a> of Brython. With Brython, we can execute Python scripts directly in html pages.</p>
+        <p>Also, I started doing exercises on LeetCode, here is <a href="{{ url_for('brythonax.leetcode') }}">my codes</a>, hope I can stick with it.</p>
+        <br>
+        <p>Webmaster: Andreevsky, and his brave friend Mona</p>
+    </div>
+    <div class="cn">
+        <p>大家好，我是一个Python爱好者。 所以我用 Python 库（Brython 和 Flask）搭建了这个小站。</p>
+        <p>这里有 Brython 的<a href="{{ url_for('brythonax.doc',lan='cn') }}">文档</a>和<a href="{{ url_for('brythonax.demo',lan='cn') }}">演示</a>。 凭借 Brython，我们可以直接在 html 页面中执行 Python 脚本啦。</p>
+        <p>此外，我开始在 LeetCode 上做练习，这是<a href="{{ url_for('brythonax.leetcode') }}">我的代码</a>，希望我能坚持下去。</p>
+        <br>
+        <p>这个网站属于兴趣制作，消磨时间。</p>
+        <p>站长：安德烈夫斯基 和他勇敢的朋友 Mona</p>
+    </div>
+    <img src="{{ url_for('static', filename='mona.jpg') }}" alt="Mona Icon">
 </div>
+
 <script type="text/python" id="script0">
 from browser import document, html
 
@@ -51,13 +57,13 @@ def show(event):
             element_cn.style.display = "none"
         for element_en in elements_en:
             element_en.style.display = "inherit"
-    elif dropdown.options[num].value == "Chinese":
+    elif dropdown.options[num].value == "中文":
         for element_cn in elements_cn:
             element_cn.style.display = "inherit"
         for element_en in elements_en:
             element_en.style.display = "none"
 
-dropdown = html.SELECT(html.OPTION(l) for l in ["English", "Chinese"])
+dropdown = html.SELECT(html.OPTION(l) for l in ["English", "中文"])
 dropdown.bind("change", show)
 document["select_language"] <= dropdown
 </script>
