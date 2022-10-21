@@ -6,8 +6,9 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brythonax.css') }}">
 <style>
-.cn{
+.cn, .en{
     display: none;
 }
 
@@ -19,19 +20,20 @@ h1{
 
 <body onload="brython(1)">
 
-<h1 class="en">Welcome to My Site</h1>
-<h1 class="cn">欢迎来到我的小站</h1>
+<h1 class="lan en">Welcome to My Site</h1>
+<h1 class="lan cn">欢迎来到我的小站</h1>
 
-<div id="select_language" style="padding-left: 30px;"></div>
+<div id="div_language" style="padding-left: 30px;">
+</div>
 <div style="padding-left: 15%; padding-right: 15%;">
-    <div class="en">
+    <div class="lan en">
         <p >Hello, I'm a newbie Pythoner. So I built this website with Python libs (Brython and Flask).</p>
         <p>Here is the <a href="{{ url_for('brythonax.doc') }}">document</a> and <a href="{{ url_for('brythonax.demo') }}">demos</a> of Brython. With Brython, we can execute Python scripts directly in html pages.</p>
         <p>Also, I started doing exercises on LeetCode, here is <a href="{{ url_for('brythonax.leetcode') }}">my codes</a>, hope I can stick with it.</p>
         <br>
         <p>Webmaster: Andreevsky, and his brave friend Mona</p>
     </div>
-    <div class="cn">
+    <div class="lan cn">
         <p>大家好，我是一个Python爱好者。 所以我用 Python 库（Brython 和 Flask）搭建了这个小站。</p>
         <p>这里有 Brython 的<a href="{{ url_for('brythonax.doc',lan='cn') }}">文档</a>和<a href="{{ url_for('brythonax.demo',lan='cn') }}">演示</a>。 凭借 Brython，我们可以直接在 html 页面中执行 Python 脚本啦。</p>
         <p>此外，我开始在 LeetCode 上做练习，这是<a href="{{ url_for('brythonax.leetcode') }}">我的代码</a>，希望我能坚持下去。</p>
@@ -43,29 +45,57 @@ h1{
 </div>
 
 <script type="text/python" id="script0">
-from browser import document, html
+from browser import document, html, window, alert
 
+lan_dict = {
+    "English":".en",
+    "中文":".cn"
+}
+
+elements_lan = document.select(".lan")
 elements_en = document.select(".en")
 elements_cn = document.select(".cn")
 
-# language
-def show(event):
-    dropdown = event.target
-    num = dropdown.selectedIndex
-    if dropdown.options[num].value == "English":
-        for element_cn in elements_cn:
-            element_cn.style.display = "none"
-        for element_en in elements_en:
-            element_en.style.display = "inherit"
-    elif dropdown.options[num].value == "中文":
-        for element_cn in elements_cn:
-            element_cn.style.display = "inherit"
-        for element_en in elements_en:
-            element_en.style.display = "none"
 
-dropdown = html.SELECT(html.OPTION(l) for l in ["English", "中文"])
-dropdown.bind("change", show)
-document["select_language"] <= dropdown
+def show_lan(lan='.en'):
+    for element_lan in elements_lan:
+        element_lan.style.display = "none"
+    for element_select in document.select(lan):
+        element_select .style.display = "inherit"
+        
+try:
+    storage = window.localStorage
+    storage.setItem("x", "x")
+    storage.removeItem("x")
+except:
+    storage = None
+
+if storage is None:
+    show_lan()
+else:
+    lan = '.en' if 'lan' not in storage else storage['lan']
+    language = [k for k,v in lan_dict.items() if v==lan]
+    show_lan(lan)
+
+def show(ev):
+    cur_lan = ev.target.textContent
+    if storage is not None:
+        storage['lan'] = lan_dict[cur_lan]
+    show_lan(storage['lan'])
+    document['cur_lan'].innerHTML = cur_lan
+
+menu_lan = html.SPAN("English" if storage is None or 'lan' not in storage else language, id="cur_lan")
+div_lan = document.createElement("div")
+div_lan.classList.add('language_options')
+for lan_name in lan_dict:
+    option_lan = document.createElement("p")
+    txt = document.createTextNode(lan_name)
+    option_lan.appendChild(txt)
+    option_lan.bind("click", show)
+    div_lan <= option_lan
+
+document['div_language'] <= menu_lan
+document['div_language'] <= div_lan
 </script>
 </body>
 

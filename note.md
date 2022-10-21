@@ -40,7 +40,7 @@
 # 打开网页
 https://brythonax.herokuapp.com
 
-# 本地 Windows 环境变量设置
+# 本地 Windows CMD 设置（重启后失效）
 1. 打开 command prompt
 2. 设置 FLASK APP 名称  
    `set FLASK_APP=brythonax`
@@ -49,3 +49,17 @@ https://brythonax.herokuapp.com
 4. 查看变量  
    `echo %FLASK_APP%`  
    `echo %FLASK_DEBUG%`
+
+# 本地 Windows PowerShell 环境变量设置（永久有效）
+1. 打开 PowerShell
+2. 设置 FLASK APP 名称  
+   `$Env:FLASK_APP="brythonax"`
+3. 设置 开启 DEBUG 模式  
+   `$Env:FLASK_DEBUG="1"`
+4. 查看变量  
+   `echo $Env:FLASK_APP`  
+   `echo $Env:FLASK_DEBUG`
+5. 如果某些终端无法运行 activate.ps1 文件，错误为 `FullyQualifiedErrorId : UnauthorizedAccess`
+   * Win + R -> gpedit.msc
+   * User Configuration -> Administrative Template -> Windows Components -> Windows PowerShell
+   * Enable "Turn on Script Execution" & select "Allow local scripts and remote signed scripts"
