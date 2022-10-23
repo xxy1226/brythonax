@@ -4,6 +4,9 @@
 <head>
 <meta charset="utf-8">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
+
 <title>Brython 演示</title>
 <style>
 body{
@@ -372,8 +375,8 @@ span.python-builtin{
 </div>
 
 <div class="example" id="ex6">
-    <button id="button6">insert an element (Brython style)</button>
-    <span id="zone6" class="zone">initial content</span>
+    <button id="button6">插入一个元素（Brython方法）</button>
+    <span id="zone6" class="zone">初始内容</span>
 
     <script type="text/python" id="script6">
     from browser import document, html
@@ -394,16 +397,15 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    To create DOM elements, Brython provides the module <code class="module">browser.html</code>. It defines classes with the name of all the valid HTML tags in uppercase ; <code>html.B("message")</code> creates the element <code class="html">&lt;B&gt;message&lt;/B&gt;</code>
-    <p>To include an element inside another one, Brython uses the operator <code><=</code> : think of it as a left arrow, not as "less than or equal". The use of an operator is more concise and avoids having to use a function call.
-    </code>
+        <p>为了创建 DOM 元素，Brython 提供了模块 <code class="module">browser.html</code>。 它使用大写的所有有效 HTML 标记的名称定义类； <code>html.B("消息内容")</code> 创建元素 <B>消息内容</B></p>
+        <p>为了在另一个元素中包含一个元素，Brython 使用运算符 <code><=</code> ：将其视为左箭头，而不是“小于或等于”。 运算符的使用更加简洁，并且避免了使用函数调用。</p>
     </span>
 
 </div>
 
 <div class="example" id="ex61">
-    <button id="button61">insert before an element</button>
-    <div id="zone61" class="zone"><ul><li>element</ul></div>
+    <button id="button61">在元素前插入</button>
+    <div id="zone61" class="zone"><ul><li>原元素</ul></div>
 
     <script type="text/python" id="script61">
     from browser import document, html
@@ -415,7 +417,7 @@ span.python-builtin{
     def change(event):
         global nb
         nb += 1
-        ul.insertBefore(html.LI(f"element before {nb}"), element)
+        ul.insertBefore(html.LI(f"前插的新元素 {nb}"), element)
 
     document["button61"].bind("click", change)
     </script>
@@ -425,15 +427,15 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    We use the standard DOM method <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore" class="external">insertBefore()</a>
+        我们使用标准的 DOM 方法 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore" class="external">insertBefore()</a>
     </code>
     </span>
 
 </div>
 
 <div class="example" id="ex62">
-    <button id="button62">insert after an element</button>
-    <div id="zone62" class="zone"><ul><li>element</ul></div>
+    <button id="button62">在元素后插入</button>
+    <div id="zone62" class="zone"><ul><li>原元素</ul></div>
 
     <script type="text/python" id="script62">
     from browser import document, html
@@ -445,7 +447,7 @@ span.python-builtin{
     def change(event):
         global nb
         nb += 1
-        ul.insertBefore(html.LI(f"element after {nb}"), element.nextSibling)
+        ul.insertBefore(html.LI(f"后插的新元素 {nb}"), element.nextSibling)
 
     document["button62"].bind("click", change)
     </script>
@@ -455,10 +457,7 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    We use the standard DOM method <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore" class="external">insertBefore()</a>
-and insert the element after <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling" class="external">element.nextSibling</a>.
-If the element is the last in its parent's children, <code>nextSibling</code> is <code>null</code> so the new element is inserted at
-the end.
+        我们使用标准的 DOM 方法 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore" class="external">insertBefore()</a> 并在 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling" class="external">element.nextSibling</a> 之后插入元素。 如果元素是其父子元素中的最后一个，则 <code>nextSibling</code> 为 <code>null</code>，因此新元素将插入到最后。
     </code>
     </span>
 
@@ -1184,7 +1183,7 @@ def intro(ev):
     document[example_id].style.display="block"
     current = example_id
 
-anchor = html.A("简介", Class="menu", href="#", id="aintro")
+anchor = html.A("简介", Class="menu selected", href="#", id="aintro")
 anchor.bind("click", intro)
 
 document["menu"] <= html.LI(anchor)
@@ -1236,9 +1235,6 @@ for example in document.get(selector=".example"):
     example.style.display = "none"
 
 </script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
-
 </body>
 
 </html>
