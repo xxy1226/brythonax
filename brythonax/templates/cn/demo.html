@@ -465,8 +465,8 @@ span.python-builtin{
 
 
 <div class="example" id="ex_elt_attr">
-    <button id="button_elt_attr">insert an element with attributes</button>
-    <span id="zone_elt_attr" class="zone">initial content</span>
+    <button id="button_elt_attr">插入带有属性的元素</button>
+    <span id="zone_elt_attr" class="zone">初始内容</span>
 
     <script type="text/python" id="script_elt_attr">
     from browser import document, html
@@ -474,7 +474,7 @@ span.python-builtin{
     element = document["zone_elt_attr"]
 
     def insert(event):
-        element <= html.SPAN("new text",
+        element <= html.SPAN("新加红色文本",
             style=dict(color="red", paddingLeft="1em"),
             Class="down")
 
@@ -486,16 +486,13 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    The attributes of a tag are defined as keyword arguments of the html classes constructor.
-    <p>Note that the style attribute is passed as a dictionary ; also note that, since <code>class</code> is a Python keyword, it can't be used as a key, so we use <code>Class</code> instead (tag attributes are case-insensitive).
-    </code>
+        <p>标记的属性被定义为 html 类构造函数的关键字参数。</p>
+        <p>请注意，样式属性是作为字典传递的； 还要注意，由于 <code>class</code> 是 Python 关键字，它不能用作键，所以我们使用 <code>Class</code> 代替（标签属性不区分大小写）。</p>
     </span>
-
 </div>
 
-
 <div class="example" id="ex7">
-    <button id="button7">insert an HTML table</button>
+    <button id="button7">插入 HTML 表格</button>
     <p>
     <div id="zone7" class="zone" style="width:60%"></div>
 
@@ -507,11 +504,11 @@ span.python-builtin{
         table = TABLE()
 
         # header row
-        table <= TR(TH(f"Column {i}") for i in range(5))
+        table <= TR(TH(f"列 {i}") for i in range(5))
 
         # table rows
         for row in range(3):
-            table <= TR(TD(f"Cell {row}-{i}") for i in range(5))
+            table <= TR(TD(f"格 {row}-{i}") for i in range(5))
 
         document["zone7"].clear()
         document["zone7"] <= table
@@ -524,10 +521,10 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    To build a table, we use the HTML tags <code>TABLE, TR, TH</code> and <code>TD</code>.
-    <p>The first attribute passed to the classes defined in <code class="module">browser.html</code> is either a string, another instance of a class, <i>or an iterator on such elements</i>.
-    <p>Here we use a Python generator expression to include several headers (<code>TH</code>) in the first row (<code>TR</code>) of the table, and the same for the table cells (<code>TD</code>) in the next rows.
-    <p><code>clear()</code> is a method that removes all the element contents.
+        <p>要建立一个表格，我们使用 HTML 标签 <code>TABLE、TR、TH</code> 和 <code>TD</code>。</p>
+        <p>传递给 <code class="module">browser.html</code> 中定义的类的第一个属性是字符串、类的另一个实例或<i>此类元素的迭代器</i>。</p>
+        <p>在这里，我们使用 Python 生成器表达式在表格的第一行 (<code>TR</code>) 中包含多个标题 (<code>TH</code>)，并在接下来的行中包含表格单元格 (<code>TD</code>)。</p>
+        <p><code>clear()</code> 是一种删除所有元素内容的方法。</p>
     </code>
     </span>
 
@@ -535,7 +532,7 @@ span.python-builtin{
 
 
 <div class="example" id="ex12">
-    <button id="button12">insert a dropdown menu</button>
+    <button id="button12">插入下拉菜单</button>
     <span id="zone12" class="zone"></span>
 
     <script type="text/python" id="script12">
@@ -545,11 +542,11 @@ span.python-builtin{
     def show(event):
         dropdown = event.target
         num = dropdown.selectedIndex
-        InfoDialog("Demo", "Selected: {}".format(dropdown.options[num].value))
+        InfoDialog("示例", "被选项: {}".format(dropdown.options[num].value))
 
     def insert_dropdown(event):
-        document["zone12"] <= "Your choice : "
-        dropdown = html.SELECT(html.OPTION(f"Choice {i}") for i in range(5))
+        document["zone12"] <= "你的选择： "
+        dropdown = html.SELECT(html.OPTION(f"选择 {i}") for i in range(5))
         dropdown.bind("change", show)
         document["zone12"] <= dropdown
 
@@ -561,23 +558,22 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    We build the dropdown menu by a SELECT element, using a generator expression with the OPTION elements displayed in the menu.
-    <p>When the user changes the selected option in the menu, the event "change" is triggered on the SELECT box. This is done in the line
-
-    <p>
+        <p>我们通过 SELECT 元素构建下拉菜单，使用生成器表达式和菜单中显示的 OPTION 元素。</p>
+        <p>当用户更改菜单中的选定选项时，会在 SELECT 框上触发“更改”事件。 这是在行中完成的</p>
+        <p> </p>
     <pre class="python">
     dropdown.bind("change", show)
     </pre>
     <p>
 
-    <p>In function <code>show(event)</code>, <code>event.target</code> is the element itself.
-    <p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement" target="_blank">SELECT element</a> has an attribute <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedIndex" target="_blank"><code>selectedIndex</code></a>, the rank of the selected item in the list of options, available by its attribute <code>options</code>. The OPTION element itself has an attribute <code>value</code>, here the option text.
+    <p>在函数 <code>show(event)</code> 中，<code>event.target</code> 是元素本身。</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement" target="_blank">SELECT</a> 元素有一个属性 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedIndex" target="_blank"><code>selectedIndex</code></a>，即选项列表中所选项目的排名，可通过其属性 <code>options</code> 获得。 OPTION 元素本身有一个属性值，这里是选项文本。</p>
     </span>
 </div>
 
 
 <div class="example" id="ex8">
-    <button id="button8">draw in a canvas</button>
+    <button id="button8">在画布上绘制</button>
     <canvas id="zone8" width="200" height="50"
         style="border-color:#000;border-style:solid;border-width:1px;margin-left:5em;"></canvas>
 
@@ -605,13 +601,13 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    We start by importing the module <code class="module">math</code>, the same as in the Python standard distribution.
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas</a> is an API for drawing geometric forms in the page. The examples on the MDN pages are written in Javascript but can be easily translated for Brython.
+        <p>我们首先导入模块 <code class="module">math</code> ，与 Python 标准发行版中的相同。</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas</a> 是用于在页面中绘制几何图形的 API。 MDN 页面上的示例是用 Javascript 编写的，但是使用 Brython 也很容易。</p>
     </span>
 </div>
 
 <div class="example" id="ex9">
-    <button id="button9">insert an image</button>
+    <button id="button9">插入图像</button>
     <p><div id="zone9" class="zone" style="height:60px;"></div>
 
     <script type="text/python"  id="script9">
@@ -628,18 +624,18 @@ span.python-builtin{
 </div>
 
 <div class="example" id="ex16">
-    <button id="button16">get the value of form fields</button>
+    <button id="button16">获取表单字段的值</button>
     <p><div id="zone16" class="zone"></div>
 
     <p><div style="width:30%; padding-left:3em; background-color:#ddd;">
-      <p><input id="input16" autocomplete="off" value="test">
+      <p><input id="input16" autocomplete="off" placeholder="餐厅名称">
       <br><select id="select16" autocomplete="off">
-          <option value="one">one
-          <option value="two">two
-          <option value="three">three
+          <option value="小炒肉">小炒肉套餐
+          <option value="宫保鸡丁">宫保鸡丁套餐
+          <option value="鱼香肉丝">鱼香肉丝套餐
       </select>
       <br>
-      <textarea id="textarea16" rows=3 cols=30 autocomplete="off">your content here !...</textarea>
+      <textarea id="textarea16" rows=3 cols=30 autocomplete="off" placeholder="添加备注 !..."></textarea>
     </div>
 
     <script type="text/python" id="script16">
@@ -651,9 +647,9 @@ span.python-builtin{
         option = select.options[select.selectedIndex].value
         text = document["textarea16"].value
         document["zone16"].clear()
-        document["zone16"] <= (f"Value in INPUT field: {input}",
-            html.BR(), f"Selected option: {option}",
-            html.BR(), f"Value in TEXTAREA field: {text}"
+        document["zone16"] <= (f"你选择的餐厅: {input}",
+            html.BR(), f"套餐: {option}",
+            html.BR(), f"备注: {text}"
             )
 
     document["button16"].bind("click", show_values)
@@ -666,7 +662,7 @@ span.python-builtin{
 </div>
 
 <div class="example" id="ex13">
-    <button id="button13">select elements by CSS selectors</button>
+    <button id="button13">通过 CSS 选择器选择元素</button>
     <span id="zone13" class="zone"></span>
 
     <script type="text/python" id="script13">
@@ -678,11 +674,11 @@ span.python-builtin{
 
         # get a list of all BUTTON elements
         buttons = document.select("button")
-        document["zone13"] <= "On this page there are {} buttons ".format(len(buttons))
+        document["zone13"] <= "本页包含 {} 按钮 ".format(len(buttons))
 
         # get a list of all tags with class "zone"
         zones = document.select(".zone")
-        document["zone13"] <= "and {} elements with class 'zone'".format(len(zones))
+        document["zone13"] <= "和 {} 'zone' 类的元素".format(len(zones))
 
     document["button13"].bind("click", change)
     </script>
@@ -692,13 +688,13 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    We have seen how to get an element by its id : <code>document[element_id]</code>. Here, <code>document["zone13"]</code> is the bordered box at the right of the button.
-    <p>The method <code>select(css_selector)</code> provides a way to select elements based on the <a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS selector syntax</a>. Passing the name of a tag returns a list of all the elements with this tag ; passing <code>.zone</code> returns a list of all the elements whose attribute <code>class</code> is set to <code>"zone"</code>.
+        <p>我们已经看到了如何通过 id 获取元素：<code>document[element_id]</code>。 这里，<code>document["zone13"]</code> 是按钮右侧的带边框的框。</p>
+        <p>方法 <code>select(css_selector)</code> 提供了一种基于 <a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS 选择器语法</a>选择元素的方法。 传递一个标签的名字会返回一个包含这个标签的所有元素的列表； 传递 <code>.zone</code> 返回属性 <code>class<code> 设置为 <code>"zone"</code> 的所有元素的列表。</p>
     </span>
 </div>
 
 <div class="example" id="ex14">
-    <button id="button14">rotate an element</button>
+    <button id="button14">旋转元素</button>
     <span id="zone14" class="zone">
         <button style="background-color: red; width: 1.5em;" id="rot14">&nbsp;</button>
     </span>
@@ -722,12 +718,12 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    <code>transform</code> is another attribute of <code>style</code> that can make changes to the element, including a rotation by a specified angle.
+    <code>transform</code> 是 <code>style</code> 的另一个属性，可以对元素进行更改，包括按指定角度旋转。
     </span>
 </div>
 
 <div class="example" id="ex15">
-    <button id="button15">animate an element</button>
+    <button id="button15">动画元素</button>
     <p>
     <div id="zone15" style="padding:0;" class="zone">
         <button style="background-color: #fff; border-width: 0px; color:#000;padding:0;font-size:24px;height:auto;" id="rot15">&#9658;</button>
@@ -744,10 +740,10 @@ span.python-builtin{
     def change(event):
         global run
         if run is None:
-            # start animation
+            # 开始动画
             animloop(1)
         else:
-            # stop animation
+            # 停止动画
             window.cancelAnimationFrame(run)
             run = None
 
@@ -759,10 +755,10 @@ span.python-builtin{
         x += dx
         if x > document["zone15"].offsetWidth-moving.offsetWidth:
             dx = -dx
-            moving.html = "&#9668;" # left triangle
+            moving.html = "&#9668;" # 向左的三角形
         elif x <= 0:
             dx = -dx
-            moving.html = "&#9658;" # right triangle
+            moving.html = "&#9658;" # 向右的三角形
 
     def animloop(t):
         global run
@@ -775,16 +771,16 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    The browser window provides 2 functions to start and stop an animation : <code>requestAnimationFrame</code> and <code>cancelAnimationFrame</code>.
-    <p>When the user clicks on the button, the animation is started by calling the function <code>animloop</code> with an arbitrary argument. <code>window.requestAnimationFrame</code>, called with the function itself as argument, returns a reference to the animation. The drawing function, <code>render()</code> is called ; the loop is then executed repeatedly under the control of the animation loop.
-    <p>In <code>render()</code>, to put the element at a specific location, we use another <code>transform</code> function, <code>translate(x, y)</code>. The moving element bounces, and its shape changes, when its position reaches the box borders.
-    <p>If the user clicks the button again, calling <code>window.cancelAnimationFrame</code> on the animation object stops the animation.
+        <p>浏览器窗口提供 2 个函数来启动和停止动画：<code>requestAnimationFrame</code> 和 <code>cancelAnimationFrame</code>。</p>
+        <p>当用户点击按钮时，通过调用带有任意参数的函数 <code>animloop</code> 来启动动画。 <code>window.requestAnimationFrame</code> 以函数本身作为参数调用，返回对动画的引用。 绘图函数 <code>render()</code> 被调用； 然后循环在动画循环的控制下重复执行。</p>
+        <p>在 <code>render()</code> 中，为了将元素放置在特定位置，我们使用了另一个变换函数 <code>translate(x, y)</code>。 当移动元素的位置到达盒子边界时，它会反弹，并且它的形状会发生变化。</p>
+        <p>如果用户再次单击该按钮，则在动画对象上调用 <code>window.cancelAnimationFrame</code> 会停止动画。</p>
     </span>
 </div>
 
 <div class="example" id="ex_mousemove">
     <button id="button_mousemove" style="border-width:0;background-color:inherit;">
-        move an element with the mouse
+        用鼠标移动元素
     </button>
     <b id="moving" style="top:10px; left: 140px;">drag me
     </b>
@@ -795,7 +791,7 @@ span.python-builtin{
     class ElementMove:
 
         def __init__(self, moving):
-            """Make "moving" element movable with the mouse"""
+            """用鼠标使“移动”元素可移动"""
             self.moving = moving
             self.is_moving = False
             self.moving.bind("mousedown", self.start)
@@ -803,26 +799,25 @@ span.python-builtin{
             moving.style.cursor = "move"
 
         def start(self, event):
-            """When user clicks on the moving element, set boolean is_moving
-            to True and store mouse and moving element positions"""
+            """当用户点击移动元素时，将 boolean is_moving 设置为 True 并存储鼠标和移动元素的位置"""
             self.is_moving = True
             self.mouse_pos = [event.x, event.y]
             self.elt_pos = [self.moving.left, self.moving.top]
             document.bind("mousemove", self.move)
-            # prevent default behaviour to avoid selecting the moving element
+            # 阻止默认行为以避免选择移动元素
             event.preventDefault()
 
         def move(self, event):
-            """User moves the mouse"""
+            """用户移动鼠标"""
             if not self.is_moving:
                 return
 
-            # set new moving element coordinates
+            # 设置新的移动元素坐标
             self.moving.left = self.elt_pos[0] + event.x - self.mouse_pos[0]
             self.moving.top = self.elt_pos[1] + event.y - self.mouse_pos[1]
 
         def stop(self, event):
-            """When user releases the mouse button, stop moving the element"""
+            """当用户释放鼠标按钮时，停止移动元素"""
             self.is_moving = False
             document.unbind("mousemove")
 
@@ -834,14 +829,14 @@ span.python-builtin{
     <p>
 
     <span class="comment">
-    This example uses other mouse events than "click" : "mousedown", "mousemove" and "mouseup".
-    <p>The mouse position is available by the attributes <code>x</code>, <code>y</code> of the event object.
-    <p>The position of an element can be changed by defining its attributes <code>left</code> and <code>top</code>.
+        <p>此示例使用“click”以外的其他鼠标事件：“mousedown”、“mousemove”和“mouseup”。</p>
+        <p>鼠标位置可通过事件对象的属性 <code>x</code>、<code>y</code> 获得。</p>
+        <p>元素的位置可以通过定义其属性 <code>left</code> 和 <code>top</code> 来改变。</p>
     </span>
 </div>
 
 <div class="example" id="ex_ls">
-    <button id="button_ls">use local storage</button>
+    <button id="button_ls">使用本地存储</button>
     <p><div id="zone_ls" style="padding-left:1em;"></div>
 
     <script type="text/python"  id="script_ls">
@@ -850,7 +845,7 @@ span.python-builtin{
 
     zone = document["zone_ls"]
 
-    """Test if the browser supports local storage"""
+    """测试浏览器是否支持本地存储"""
     try:
         storage = window.localStorage
         storage.setItem("x", "x")
@@ -859,32 +854,32 @@ span.python-builtin{
         storage = None
 
     def action(ev):
-        """User clicked on "add" or "remove" button"""
+        """用户单击“添加”或“移除”按钮"""
         button = ev.target
         row = button.closest("TR")
-        if button.text == "remove":
+        if button.text == "移除":
             key = row.get(selector="TD")[0].text
             storage.removeItem(key)
         else:
             key, value = [x.value for x in row.get(selector="INPUT")]
             if key.strip():
                 storage.setItem(key, value)
-        # refresh table
+        # 刷新表格
         show()
 
     def update_value(ev):
-        """If a value field has been modified, update storage"""
+        """如果值字段已被修改，则更新存储"""
         row = ev.target.closest("TR")
         key = row.get(selector="TD")[0].text
         value = row.get(selector="INPUT")[0].value
         storage.setItem(key, value)
 
     def show(*args):
-        """Shows the data stored locally, add buttons to add / remove items"""
+        """显示本地存储的数据，添加按钮以添加/删除项目"""
         zone.clear()
 
         if storage is None:
-            zone <= "No local storage for this browser"
+            zone <= "此浏览器没有本地存储"
             return
 
         table = TABLE()
@@ -894,10 +889,10 @@ span.python-builtin{
             value_field = INPUT(value=value)
             value_field.bind("change", update_value)
             table <= TR(TD(key) + TD(value_field)+
-                TD(BUTTON("remove", Class="btn-ls")))
+                TD(BUTTON("移除", Class="btn-ls")))
 
         table <= TR(TD(INPUT()) + TD(INPUT()) +
-            TD(BUTTON("add", Class="btn-ls")))
+            TD(BUTTON("添加", Class="btn-ls")))
 
         zone <= table
 

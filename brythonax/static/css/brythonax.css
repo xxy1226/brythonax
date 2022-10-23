@@ -1,0 +1,36 @@
+#div_language {
+    position: relative;
+    display: inline-block;
+}
+
+#cur_lan {
+    color: white;
+    border-color: #04AA6D;
+    box-shadow: none;
+    background-color: #059862;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline-width: 0;
+    padding: 8px 16px;
+}
+
+.language_options {
+    display: none;
+    color: black;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index:1;
+}
+
+.language_options p:hover {
+    cursor:pointer;
+    background-color: aquamarine;
+}
+
+#div_language:hover .language_options {
+    display:block;
+}
