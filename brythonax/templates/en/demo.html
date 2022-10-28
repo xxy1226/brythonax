@@ -6,132 +6,10 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brythonax.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}">
 
 <title>Brython 演示</title>
-<style>
-body{
-    font-size: 14px;
-    font-family: Helvetica;
-}
-
-a{
-    color: #333;
-}
-
-a.menu{
-    text-decoration: none;
-}
-
-a.menu:hover{
-    background-color: #ccc;
-}
-
-a.selected{
-    font-weight: bold;
-}
-
-a:visited{
-    color: #333;
-}
-
-li{
-    list-style-type: none;
-}
-
-#panel{
-    display:table-cell;
-    width:65%;
-    padding-right:2%;
-    text-align: left;
-}
-
-button{
-    background-color: #dadada;
-    color: #113;
-    border-style: solid;
-    border-color: #000;
-    border-width: 1px;
-    border-radius: 3px;
-    font-size: 1.2em;
-}
-button.btn-ls{
-    font-size: 1em;
-}
-
-div.example{
-    margin-top: 2em;
-    display: none;
-}
-
-pre{
-    display: inline-block;
-    padding: 1em;
-    font-family: Consolas, Courier New;
-    color: #ff9;
-    background-color: #114;
-    border-radius: 10px;
-    margin-top: 2em;
-    width: 66%;
-}
-
-pre.html{
-    padding: 0.5em;
-}
-
-.zone{
-    margin-left: 5em;
-    padding: 1em;
-    border-width: 1px;
-    border-color: #333;
-    border-style: solid;
-    width: 20em;
-}
-
-code{
-    font-family: Consolas, Courier New;
-    color: #113;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-}
-
-code.file{
-    background-color: #fff;
-    font-weigth: bold;
-    font-style: italic;
-}
-
-#moving{
-    position: relative;
-    left:140px;
-    top:10px;
-    font-size:16px;
-    padding: 3px;
-    background-color: var(--clear-2);
-    border-radius: 4px;
-}
-
-.up{
-    font-size: 1.2em;
-}
-.down{
-    font-size:0.8em;
-}
-
-/* colors for highlighted Python code */
-
-span.python-string{
-    color: #6aa;
-}
-span.python-comment{
-    color: #6a6;
-}
-span.python-keyword{
-    color: #42ebf4;
-}
-span.python-builtin{
-    color: #0f0;
-}
-</style>
 
 </head>
 
@@ -139,6 +17,9 @@ span.python-builtin{
 
 <h1 style="text-align: center"><a href="http://brython.info" target="_blank" class="external">Brython</a></h1>
 <div style="display:table; width:100%;">
+    <div id="div_language" style="padding-left: 30px;">
+      <span id='cur_lan'>English</span>
+    </div>
   <div style="display: table-row">
     <div style="display: table-cell; width:20%; vertical-align: top;">
       <ul id="menu">
@@ -1252,6 +1133,45 @@ for example in document.get(selector=".example"):
     example.style.display = "none"
 
 </script>
+
+<script type="text/python" id="languageScript">
+    from browser import document, html, window, alert
+    
+    lan_dict = {
+        "English":".en",
+        "中文":".cn"
+    }
+    
+    try:
+        storage = window.localStorage
+        storage.setItem("x", "x")
+        storage.removeItem("x")
+    except:
+        storage = None
+
+    cur_url = window.location.href
+    cur_lan = cur_url[cur_url.find('/', 8)+1:cur_url.find('/', 8)+3]
+    
+    if storage is not None or 'lan' not in storage or storage['lan'] != '.'+cur_lan:
+        storage['lan'] = '.'+cur_lan
+    
+    def goto(ev):
+        tar = ev.target.textContent
+        if lan_dict[tar] != cur_lan:
+            url = window.location.href.replace(cur_lan, lan_dict[tar][1:])
+            window.location = url
+    
+    div_lan = document.createElement("div")
+    div_lan.setAttribute('id','language_options')
+    for lan_name in lan_dict:
+        option_lan = document.createElement("p")
+        txt = document.createTextNode(lan_name)
+        option_lan.appendChild(txt)
+        option_lan.bind("click", goto)
+        div_lan <= option_lan
+    
+    document['div_language'] <= div_lan
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, url_for, send_from_directory, request, jsonify， make_response
+from flask import render_template, Blueprint, url_for, send_from_directory, request, jsonify, make_response
 import brythonax.settings as settings
 import os
 
@@ -17,8 +17,8 @@ def demo(lan='en'):
         return render_template('cn/demo.html')
     return render_template('en/demo.html')
 
-@bp.route('/demo')
-@bp.route('/<lan>/demo')
+@bp.route('/doc')
+@bp.route('/<lan>/doc')
 def doc(lan='en'):
     if lan == 'cn':
         return render_template('cn/docs/intro.html')

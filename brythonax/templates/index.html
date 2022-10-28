@@ -7,6 +7,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/brythonax.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brython.css') }}">
 <style>
 .cn, .en{
     display: none;
@@ -20,12 +21,16 @@ h1{
 
 <body onload="brython(1)">
 
-<h1 class="lan en">Welcome to My Site</h1>
-<h1 class="lan cn">欢迎来到我的小站</h1>
+    <div id="banner_row">
+        <h1 class="lan en">Welcome to My Site</h1>
+        <h1 class="lan cn">欢迎来到我的小站</h1>
+    </div>
 
-<div id="div_language" style="padding-left: 30px;">
+<div class="sel_lang">
+    <div id="div_language"></div>
 </div>
-<div style="padding-left: 15%; padding-right: 15%;">
+
+<div id="content" style="padding-left: 15%; padding-right: 15%;">
     <div class="lan en">
         <p >Hello, I'm a newbie Pythoner. So I built this website with Python libs (Brython and Flask).</p>
         <p>Here is the <a href="{{ url_for('brythonax.doc') }}">document</a> and <a href="{{ url_for('brythonax.demo') }}">demos</a> of Brython. With Brython, we can execute Python scripts directly in html pages.</p>
@@ -44,7 +49,7 @@ h1{
     <img src="{{ url_for('static', filename='mona.jpg') }}" alt="Mona Icon">
 </div>
 
-<script type="text/python" id="script0">
+<script type="text/python" id="languageScript">
 from browser import document, html, window, alert
 
 lan_dict = {
@@ -80,13 +85,16 @@ else:
 def show(ev):
     cur_lan = ev.target.textContent
     if storage is not None:
+        if storage['lan'] == lan_dict[cur_lan]:
+            return
         storage['lan'] = lan_dict[cur_lan]
     show_lan(storage['lan'])
     document['cur_lan'].innerHTML = cur_lan
 
 menu_lan = html.SPAN("English" if storage is None or 'lan' not in storage else language, id="cur_lan")
+menu_lan.setAttribute('Class','language')
 div_lan = document.createElement("div")
-div_lan.classList.add('language_options')
+div_lan.setAttribute('id','language_options')
 for lan_name in lan_dict:
     option_lan = document.createElement("p")
     txt = document.createTextNode(lan_name)
