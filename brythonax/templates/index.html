@@ -85,7 +85,7 @@ else:
 def show(ev):
     cur_lan = ev.target.textContent
     if storage is not None:
-        if storage['lan'] == lan_dict[cur_lan]:
+        if storage['lan'] and storage['lan'] == lan_dict[cur_lan]:
             return
         storage['lan'] = lan_dict[cur_lan]
     show_lan(storage['lan'])
