@@ -1,0 +1,78 @@
+<div class="exercise" id="ex***题号***">
+    <question class="lan en">***Q#. Title***</question>
+    <question class="lan cn">***题号. 标题***</question>
+    <p class="lan en difficulty_m">***Difficulty***</p>
+    <p class="lan cn difficulty_m">***难度***</p>
+
+    <script type="text/python" id="script***题号***">
+    from typing import List
+    
+    class Solution:
+        ***答案***
+    </script>
+
+    <div class="lan en">
+        <p>***Question***</p>
+    </div>
+    <div class="lan cn">
+        <p>***题面***</p>
+    </div>
+    <br>
+    <p class="lan en"><b>Example 1:</b></p>
+    <p class="lan cn"><b>示例 1:</b></p>
+    <div class="examples lan en">
+        <p><b>Input:</b> ***input***</p>
+        <p><b>Output:</b> ***Output***</p>
+        <p><b>Explanation:</b> ***Explanation***</p>
+    </div>
+    <div class="examples lan cn">
+        <p><b>输入:</b> ***输入***</p>
+        <p><b>输出:</b> ***输出***</p>
+        <p><b>解释:</b> ***解释***</p>
+    </div>
+
+    <pre class="python"></pre>
+
+    <div>
+        <span class="comment lan en">
+            <p class="idea">There is no repeated calculation, so brute force recursion is good enough, and no dynamic programming is required.</p>
+            <p class="idea"><b>My solution:</b></p>
+            <p class="idea">Repeatedly generate the first non-zero number (1 - 9), and pass it into the recursive function in turn, in the recursion:</p>
+            <ol>
+                <li class="idea">Check if the last digit is currently being generated.</li>
+                <ol>
+                    <li class="idea"><b>YES:</b> check if a valid +k or -k digit can be generated to the end of the current number.</li>
+                    <ol>
+                        <li class="idea"><b>YES:</b> add it to the final list <code>arr</code>.</li>
+                    </ol>
+                    <li class="idea"><b>NO:</b> if a valid +k or -k digit can be generated to the end of the current number, pass the new number into the recursion again.</li>
+                </ol>
+            </ol>
+        </span>
+        <span class="comment lan cn">
+            <p class="idea">这里没有重复的计算，使用暴力递归即可，无需动态规划。</p>
+            <p class="idea"><b>我的思路:</b></p>
+            <p class="idea">重复生成首位非零数（1 - 9），将其依次传入递归函数，在递归中：</p>
+            <ol>
+                <li class="idea">检查当前是否正在生成最后一位数字</li>
+                <ol>
+                    <li class="idea"><b>是：</b>检查是否能生成一个比当前末尾 +k 或 -k 的合法数字。</li>
+                    <ol>
+                        <li class="idea"><b>是：</b>将其加入最终列表<code>arr</code>中。</p></li>
+                    </ol>
+                    <li class="idea"><b>不是：</b>如果可以在末尾生成合法的 +k 或 -k 数，则将新的数字再次传入递归。</li>
+                </ol>
+            </ol>
+        </span>
+        <dev id="result_dev" class="lan en">
+            <p><b>Result:</b></p>
+            <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
+            <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
+        </div>
+        <dev id="result_dev" class="lan cn">
+            <p><b>结果（英网）:</b></p>
+            <p>运行时间: <b>56 毫秒</b>; 击败 73.42 % 的 python3 方案.</p>
+            <p>内存使用: <b>14 MB</b>; 击败 100.00 % 的 python3 方案.</p>
+        </div>
+    </div>
+</div>

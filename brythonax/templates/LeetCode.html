@@ -5,118 +5,30 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
 <title>Leet Code Questions</title>
-<style>
-body{
-    font-size: 14px;
-    font-family: Helvetica;
-}
 
-a{
-    color: #333;
-}
-
-a.menu{
-    text-decoration: none;
-}
-
-a.menu:hover{
-    background-color: #ccc;
-}
-
-a.selected{
-    font-weight: bold;
-}
-
-a:visited{
-    color: #333;
-}
-
-.cn{
-    display: none;
-}
-
-li{
-    list-style-type: none;
-}
-
-li.idea{
-    list-style-type: inherit;
-}
-
-#panel{
-    display:table-cell;
-    width:65%;
-    padding-right:2%;
-    text-align: left;
-}
-
-question{
-    background-color: #eee;
-    color: #113;
-    font-size: 2em;
-}
-
-div.exercise{
-    margin-top: 2em;
-    display: none;
-}
-
-div.examples{
-    padding: 15px;
-    background: #f4f4f4;
-}
-
-pre{
-    display: inline-block;
-    padding: 2em;
-    font-family: Consolas, Courier New;
-    color: #ff9;
-    background-color: #114;
-    border-radius: 10px;
-    margin-top: 2em;
-}
-
-pre.html{
-    padding: 0.5em;
-}
-
-.zone{
-    margin-left: 5em;
-    padding: 1em;
-    border-width: 1px;
-    border-color: #333;
-    border-style: solid;
-    width: 20em;
-}
-
-#moving{
-    position: relative;
-    left:140px;
-    top:10px;
-    font-size:16px;
-    padding: 3px;
-    background-color: var(--clear-2);
-    border-radius: 4px;
-}
-
-.up{
-    font-size: 1.2em;
-}
-.down{
-    font-size:0.8em;
-}
-</style>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='code.css') }}">
-<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/code.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
+<script type="text/python" src="{{ url_for('static', filename='py/leetcode.py') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brythonax.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brython.css') }}">
 
 </head>
 
-<body onload="brython({debug: 1, indexedDB: false})">
+<body onload="brython({debug: 0})">
 
-<h1 style="text-align: center"><a href="https://leetcode.com/" target="_blank" class="external en">LeetCode Exercises</a> <a href="https://leetcode.cn/" target="_blank" class="external cn">力扣练习题</a></h1>
+    <div>
+        <div id="banner_row">
+            <h1 style="text-align: center">
+                <a href="https://leetcode.com/" target="_blank" class="external lan en">LeetCode Exercises</a>
+                <a href="https://leetcode.cn/" target="_blank" class="external lan cn">力扣练习题</a></h1>
+        </div>
+    </dev>
 
+    <div class="sel_lang">
+        <div id="div_language"></div>
+    </div>
 <div id="select_language" style="padding-left: 30px;"></div>
 
 <div style="display:table; width:100%;">
@@ -127,19 +39,18 @@ pre.html{
     </div>
     <div style="" id="panel">
       <div id="intro">
-        <h3 class="en">No Bullshit - Answer Questions</h3>
-        <h3 class="cn">废话不多说 - 开始刷题</h3>
+        <h3 class="lan en">No Bullshit - Answer Questions</h3>
+        <h3 class="lan cn">废话不多说 - 开始刷题</h3>
       </div>
     </div>
   </div>
 </div>
 
 <div class="exercise" id="ex967">
-    <question id="967" hidden>967. Numbers With Same Consecutive Differences 连续差相同的数字</question>
-    <question class="en">967. Numbers With Same Consecutive Differences</question>
-    <question class="cn">967. 连续差相同的数字</question>
-    <p class="en difficulty_m">Medium</p>
-    <p class="cn difficulty_m">中等</p>
+    <question class="lan en">967. Numbers With Same Consecutive Differences</question>
+    <question class="lan cn">967. 连续差相同的数字</question>
+    <p class="lan en difficulty_m">Medium</p>
+    <p class="lan cn difficulty_m">中等</p>
 
     <script type="text/python" id="script967">
     from typing import List
@@ -170,41 +81,41 @@ pre.html{
                 process(arr, n, k, num * 10 + num % 10 + k) 
     </script>
 
-    <div class="en">
+    <div class="lan en">
         <p>Return all <b>non-negative</b> integers of length <code>n</code> such that the absolute difference between every two consecutive digits is <code>k</code>.</p>
         <p>Note that <b>every</b> number in the answer <b>must not</b> have leading zeros. For example, <code>01</code> has one leading zero and is invalid.</p>
         <p>You may return the answer in <b>any order</b>.</p>
     </div>
-    <div class="cn">
+    <div class="lan cn">
         <p>返回所有长度为 <code>n</code> 且满足其每两个连续位上的数字之间的差的绝对值为 <code>k</code> 的 <b>非负整数</b> 。</p>
         <p>请注意，<b>除了</b> 数字 <code>0</code> 本身之外，答案中的每个数字都 <b>不能</b> 有前导零。例如，<code>01</code> 有一个前导零，所以是无效的；但 <code>0</code> 是有效的。</p>
         <p>你可以按 <b>任何顺序</b> 返回答案。</p>
     </div>
     <br>
-    <p class="en"><b>Example 1:</b></p>
-    <p class="cn"><b>示例 1:</b></p>
-    <div class="examples en">
+    <p class="lan en"><b>Example 1:</b></p>
+    <p class="lan cn"><b>示例 1:</b></p>
+    <div class="examples lan en">
         <p><b>Input:</b> n = 3, k = 7</p>
         <p><b>Output:</b> [181,292,707,818,929]</p>
         <p><b>Explanation:</b> Note that 070 is not a valid number, because it has leading zeroes.</p>
     </div>
-    <div class="examples cn">
+    <div class="examples lan cn">
         <p><b>输入:</b> n = 3, k = 7</p>
         <p><b>输出:</b> [181,292,707,818,929]</p>
         <p><b>解释:</b> 注意，070 不是一个有效的数字，因为它有前导零。</p>
     </div>
-    <p class="en"><b>Example 2:</b></p>
-    <p class="cn"><b>示例 2:</b></p>
-    <div class="examples en">
+    <p class="lan en"><b>Example 2:</b></p>
+    <p class="lan cn"><b>示例 2:</b></p>
+    <div class="examples lan en">
         <p><b>Input:</b> n = 2, k = 1</p>
         <p><b>Output:</b> [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]</p>
     </div>
-    <div class="examples cn">
+    <div class="examples lan cn">
         <p><b>输入:</b> n = 2, k = 1</p>
         <p><b>输出:</b> [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]</p>
     </div>
-    <p class="en"><b>Constraints:</b></p>
-    <p class="cn"><b>提示:</b></p>
+    <p class="lan en"><b>Constraints:</b></p>
+    <p class="lan cn"><b>提示:</b></p>
     <div class="examples">
         <p>2 <= n <= 9</p>
         <p>0 <= k <= 9</p>
@@ -212,10 +123,10 @@ pre.html{
 
     <pre class="python"></pre>
 
-    <p>
-        <span class="comment en">
+    <div>
+        <span class="comment lan en">
             <p>There is no repeated calculation, so brute force recursion is good enough, and no dynamic programming is required.</p>
-            <p><b>My train of thought:</b></p>
+            <p><b>My solution:</b></p>
             <p>Repeatedly generate the first non-zero number (1 - 9), and pass it into the recursive function in turn, in the recursion:</p>
             <ol>
                 <li class="idea">Check if the last digit is currently being generated.</li>
@@ -228,124 +139,33 @@ pre.html{
                 </ol>
             </ol>
         </span>
-        <span class="comment cn">
+        <span class="comment lan cn">
             <p>这里没有重复的计算，使用暴力递归即可，无需动态规划。</p>
             <p><b>我的思路:</b></p>
             <p>重复生成首位非零数（1 - 9），将其依次传入递归函数，在递归中：</p>
-        <ol>
-            <li class="idea">检查当前是否正在生成最后一位数字</li>
             <ol>
-                <li class="idea"><b>是：</b>检查是否能生成一个比当前末尾 +k 或 -k 的合法数字。</li>
+                <li class="idea">检查当前是否正在生成最后一位数字</li>
                 <ol>
-                    <li class="idea"><b>是：</b>将其加入最终列表<code>arr</code>中。</p></li>
+                    <li class="idea"><b>是：</b>检查是否能生成一个比当前末尾 +k 或 -k 的合法数字。</li>
+                    <ol>
+                        <li class="idea"><b>是：</b>将其加入最终列表<code>arr</code>中。</p></li>
+                    </ol>
+                    <li class="idea"><b>不是：</b>如果可以在末尾生成合法的 +k 或 -k 数，则将新的数字再次传入递归。</li>
                 </ol>
-                <li class="idea"><b>不是：</b>如果可以在末尾生成合法的 +k 或 -k 数，则将新的数字再次传入递归。</li>
             </ol>
-        </ol>
         </span>
-        <p><b>Result:</b></p>
-        <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
-        <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
-    </p>
+        <dev id="result_dev" class="lan en">
+            <p><b>Result:</b></p>
+            <p>Runtime: <b>56 ms</b>; Beats 73.42 % of python3 submissions.</p>
+            <p>Memory Usage: <b>14 MB</b>; Beats 100.00 % of python3 submissions.</p>
+        </div>
+        <dev id="result_dev" class="lan cn">
+            <p><b>结果（英网）:</b></p>
+            <p>运行时间: <b>56 毫秒</b>; 击败 73.42 % 的 python3 方案.</p>
+            <p>内存使用: <b>14 MB</b>; 击败 100.00 % 的 python3 方案.</p>
+        </div>
+    </div>
 </div>
-
-
-<script type="text/python">
-from browser import document, html, highlight, alert
-
-elements_en = document.select(".en")
-elements_cn = document.select(".cn")
-
-# language
-def show(event):
-    dropdown = event.target
-    num = dropdown.selectedIndex
-    if dropdown.options[num].value == "English":
-        for element_cn in elements_cn:
-            element_cn.style.display = "none"
-        for element_en in elements_en:
-            element_en.style.display = "inherit"
-    elif dropdown.options[num].value == "Chinese":
-        for element_cn in elements_cn:
-            element_cn.style.display = "inherit"
-        for element_en in elements_en:
-            element_en.style.display = "none"
-
-dropdown = html.SELECT(html.OPTION(lan) for lan in ["English", "Chinese"])
-dropdown.bind("change", show)
-document["select_language"] <= dropdown
-
-
-# create first menu entry
-
-def intro(ev):
-    global current
-    if current is not None:
-        document[current].style.display = "none"
-        document <= document[current]
-        document["a"+current].classList.remove("selected")
-    exercise_id = "intro"
-    exercise = document[exercise_id]
-    ev.target.classList.add("selected")
-    document["panel"].clear()
-    document["panel"] <= exercise
-    document[exercise_id].style.display="block"
-    current = exercise_id
-
-anchor = html.A("Foreword ", Class="menu selected", href="#", id="aintro")
-anchor.bind("click", intro)
-
-document["menu"] <= html.LI(anchor)
-current = "intro"
-
-def load_exercise(ev):
-    global current
-    # remove dialogs
-    for dialog in document.select(".brython-dialog-main"):
-        dialog.remove()
-    if current is not None:
-        document[current].style.display = "none"
-        document <= document[current]
-        document["a"+current].classList.remove("selected")
-    exercise_id = ev.target.num
-    exercise = document[exercise_id]
-    ev.target.classList.add("selected")
-    document["panel"].clear()
-    document["panel"] <= exercise
-    exercise.style.display="block"
-    script = exercise.get(selector="script")[0]
-    src = script.text
-    while src.startswith("\n"):
-        src = src[1:]
-    indent = 0
-    while src[indent] == ' ':
-        indent += 1
-    src = "\n".join(line[indent:] for line in src.split("\n"))
-    src = highlight.highlight(src)
-    code_elt = exercise.get(selector="pre")
-    if code_elt:
-        code_elt[0].html = src.html
-    else:
-        exercise <= src
-    current = exercise_id
-
-
-for exercise in document.get(selector=".exercise"):
-    # add the Python source inside the exercise
-
-    # create a menu entry
-    question = exercise.get(selector="question")[0]
-    anchor = html.A(question.text, Class="menu", href="#", id="a"+exercise.id)
-    anchor.num = exercise.id
-
-    anchor.bind("click", load_exercise)
-    document["menu"] <= html.LI(anchor)
-
-    # hide the element
-    exercise.style.display = "none"
-
-</script>
-
 </body>
 
 </html>

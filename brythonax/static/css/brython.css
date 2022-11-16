@@ -203,8 +203,6 @@ select.language {
 .pycode{
     font-size: 0.9em;
     display: inline-block;
-    background-color:var(--clear-3);
-    color: var(--dark-1);
     padding:3px 8px 8px 8px;
     border-style:solid;
     border-width:1px;
@@ -249,30 +247,6 @@ select.language {
 li {
   margin-bottom:3px
 }
-
-pre{
-    font-family: Consolas;
-}
-pre.marked {
-  color:var(--dark-3);
-  font-size: 12px;
-}
-
-/* colors for highlighted Python code */
-
-span.python-string{
-    color: blue;
-}
-span.python-comment{
-    color: green;
-}
-span.python-keyword{
-    color: purple;
-}
-span.python-builtin{
-    color: #963;
-}
-
 /* colors for highlighted html */
 
 span.html-tag{

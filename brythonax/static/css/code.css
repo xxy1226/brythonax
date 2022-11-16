@@ -12,12 +12,24 @@ code.file{
     font-style: italic;
 }
 
-.difficulty_m{
-    color: orange;
+pre{
+    display: inline-block;
+    padding: 1em;
+    font-family: Consolas, Courier New;
+    color: #ff9;
+    background-color: #114;
+    border-radius: 10px;
+    margin-top: 2em;
+    width: 66%;
 }
 
-.difficulty_h{
-    color: red;
+pre.html{
+    padding: 0.5em;
+}
+
+pre.marked {
+  color:var(--dark-3);
+  font-size: 12px;
 }
 
 /* colors for highlighted Python code */
@@ -26,11 +38,11 @@ span.python-string{
     color: #6aa;
 }
 span.python-comment{
-    color: #6a6;
+    color: green;
 }
 span.python-keyword{
-    color: #42ebf4;
+    color: violet;
 }
 span.python-builtin{
-    color: #0f0;
+    color: aqua;
 }

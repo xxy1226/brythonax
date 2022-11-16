@@ -3,7 +3,14 @@
 
 <head>
 <meta charset="utf-8">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/code.css') }}">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16">
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brythonax.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brython.css') }}">
+
 <title>Leet Code Questions</title>
 <style>
 body{
@@ -470,8 +477,6 @@ for exercise in document.get(selector=".exercise"):
     exercise.style.display = "none"
 
 </script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='brython_stdlib.js') }}"></script>
 
 </body>
 

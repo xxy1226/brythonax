@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, url_for, send_from_directory, request, jsonify, make_response
+from flask import render_template, Blueprint, url_for, send_from_directory, request, jsonify, make_response, redirect
 import brythonax.settings as settings
 import os
 
@@ -11,6 +11,8 @@ def home(len='en'):
         return render_template('index.html')
 
 @bp.route('/demo')
+def toDemo():
+    redirect(url_for('brythonax.demo'))
 @bp.route('/<lan>/demo')
 def demo(lan='en'):
     if lan == 'cn':
@@ -41,6 +43,8 @@ def test(name=None):
 def favicon():
     return send_from_directory(os.path.join(bp.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+
 
 # Test functions:
 @bp.route('/<string:lan>/json')

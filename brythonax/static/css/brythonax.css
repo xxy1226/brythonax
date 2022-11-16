@@ -50,3 +50,89 @@
 #div_language:hover #language_options {
     display:block;
 }
+
+a{
+    color: #333;
+}
+
+a.menu{
+    text-decoration: none;
+}
+
+a.menu:hover{
+    background-color: #ccc;
+}
+
+a.selected{
+    font-weight: bold;
+}
+
+a:visited{
+    color: #333;
+}
+
+li{
+    list-style-type: none;
+}
+
+li.idea{
+    list-style-type: inherit;
+}
+
+#panel{
+    display:table-cell;
+    width:65%;
+    padding-right:2%;
+    text-align: left;
+}
+
+question{
+    background-color: #eee;
+    color: #113;
+    font-size: 2em;
+}
+
+div.exercise{
+    margin-top: 2em;
+    display: none;
+}
+
+div.examples{
+    padding: 15px;
+    background: #f4f4f4;
+}
+
+.zone{
+    margin-left: 5em;
+    padding: 1em;
+    border-width: 1px;
+    border-color: #333;
+    border-style: solid;
+    width: 20em;
+}
+
+#moving{
+    position: relative;
+    left:140px;
+    top:10px;
+    font-size:16px;
+    padding: 3px;
+    background-color: var(--clear-2);
+    border-radius: 4px;
+}
+
+.up{
+    font-size: 1.2em;
+}
+.down{
+    font-size:0.8em;
+}
+
+
+.difficulty_m{
+    color: orange;
+}
+
+.difficulty_h{
+    color: red;
+}

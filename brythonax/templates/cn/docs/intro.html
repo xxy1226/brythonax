@@ -9,6 +9,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/header.brython.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/code.css') }}">
 
 <script type="text/python3">
 from browser import window, document, html, highlight
@@ -115,12 +116,12 @@ for elt in document[target].select('.xml'):
 <br><a class="navig" href="focus_events.html">焦点事件</a>
 <br><a class="navig" href="drag_events.html">拖动事件</a>
 <br>
-<br><a class="navig" href="query.html">Query string</a>
+<br><a class="navig" href="query.html">搜索句柄</a>
 <br>
-<br><a class="navig" href="jsobjects.html">Using Javascript objects and libraries</a>
+<br><a class="navig" href="jsobjects.html">使用 Javascript 对象和库</a>
 </div>
 
-<h4>Brython-specific built-in modules</h4>
+<h4>Brython 特定的内置模块</h4>
 <div style="padding-left:10px;">
 <a class="navig" href="browser.html">browser</a>
 <br><a class="navig" href="browser.aio.html">browser.aio</a>
@@ -137,34 +138,34 @@ for elt in document[target].select('.xml'):
 <br><a class="navig" href="browser.websocket.html">browser.websocket</a>
 <br><a class="navig" href="browser.worker.html">browser.worker</a>
 <br>
-<br><i>Widgets</i>
+<br><i>小部件</i>
 <br><a class="navig" href="browser.widgets.dialog.html">browser.widgets.dialog</a>
 <br><a class="navig" href="browser.widgets.menu.html">browser.widgets.menu</a>
 <br>
-<br><a class="navig" href="interpreter.html">interpreter</a>
+<br><a class="navig" href="interpreter.html">交互式解释器</a>
 <br><a class="navig" href="javascript.html">javascript</a>
 </div>
 
-<h4>Working with Brython</h4>
+<h4>使用 Brython</h4>
 <div style="padding-left:10px;">
-<a class="navig" href="options.html">Options of function <code>brython()</code></a>
-<br><a class="navig" href="test.html">Testing and debugging</a>
-<br><a class="navig" href="deploy.html">Deploying an application</a>
+<a class="navig" href="options.html">函数 <code>brython()</code> 的选项</a>
+<br><a class="navig" href="test.html">测试和调试</a>
+<br><a class="navig" href="deploy.html">部署应用程序</a>
 </div>
 
-<h4>Cookbook</h4>
+<h4>实例</h4>
 <div style="padding-left:10px;">
 <a class="navig" href="cookbook/hello_world.html">Hello world !</a>
-<br><a class="navig" href="cookbook/content_in_div.html">Insert content in an element</a>
-<br><a class="navig" href="cookbook/basic_markup.html">HTML markup (bold,italic...)</a>
-<br><a class="navig" href="cookbook/table.html">HTML table</a>
-<br><a class="navig" href="cookbook/bind_unbind.html">Bind and unbind events</a>
-<br><a class="navig" href="cookbook/select_checkbox.html">Handle options in a SELECT</a>
-<br><a class="navig" href="cookbook/drag_drop.html">Drag and drop</a>
-<br><a class="navig" href="cookbook/get_content.html">Get the content of an element</a>
-<br><a class="navig" href="cookbook/read_file.html">Read the content of a file</a>
-<br><a class="navig" href="cookbook/local_storage.html">Store objects locally</a>
-<br><a class="navig" href="cookbook/read_text_from_imagemap.html">Example of onmouseover</a>
+<br><a class="navig" href="cookbook/content_in_div.html">在元素中插入内容</a>
+<br><a class="navig" href="cookbook/basic_markup.html">HTML 标记（粗体、斜体等）</a>
+<br><a class="navig" href="cookbook/table.html">HTML 表格</a>
+<br><a class="navig" href="cookbook/bind_unbind.html">绑定和解除绑定事件</a>
+<br><a class="navig" href="cookbook/select_checkbox.html">处理 SELECT 中的选项</a>
+<br><a class="navig" href="cookbook/drag_drop.html">拖放</a>
+<br><a class="navig" href="cookbook/get_content.html">获取元素的内容</a>
+<br><a class="navig" href="cookbook/read_file.html">读取一个文件的内容</a>
+<br><a class="navig" href="cookbook/local_storage.html">在本地存储对象</a>
+<br><a class="navig" href="cookbook/read_text_from_imagemap.html">鼠标悬停示例</a>
 </div>
 
 </td>
