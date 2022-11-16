@@ -7,7 +7,9 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/brython_stdlib.js') }}"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/brythonax.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/brython.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/code.css') }}">
 
 <title>Brython 演示</title>
 
@@ -15,11 +17,18 @@
 
 <body onload="brython({debug: 1, indexedDB: false})">
 
-<h1 style="text-align: center"><a href="http://brython.info" target="_blank" class="external">Brython</a></h1>
-<div style="display:table; width:100%;">
-    <div id="div_language" style="padding-left: 30px;">
-      <span id='cur_lan'>English</span>
+    <div id="banner_row">
+    <h1 style="text-align: center"><a href="http://brython.info" target="_blank" class="external">Brython</a></h1>
     </div>
+    
+    <div class="sel_lang">
+        <div id="div_language" style="padding-left: 30px;">
+          <span id='cur_lan'>English</span>
+        </div>
+    </div>
+    
+    <div style="display:table; width:100%; margin: 20px 0px;">
+    
   <div style="display: table-row">
     <div style="display: table-cell; width:20%; vertical-align: top;">
       <ul id="menu">
