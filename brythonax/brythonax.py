@@ -30,6 +30,10 @@ def doc(lan='en'):
 def leetcode():
     return render_template('LeetCode.html')
 
+@bp.route('/cv')
+def cv():
+    return render_template('cv/cv.html')
+
 @bp.route('/unleetcode')
 def unleetcode():
     return render_template('unLeetCode.html')

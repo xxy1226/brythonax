@@ -1,0 +1,1553 @@
+@import url(https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto|Montserrat|Libre+Franklin|Titillium+Web:wght|Nunito|Ubuntu|Volkhov);
+#cv[_ngcontent-c17] {
+ max-width:800px;
+ font-family:Arial,
+ Helvetica,
+ sans-serif;
+ -webkit-box-shadow:0 1px 5px 0 rgba(0,
+ 0,
+ 0,
+ .2),
+ 0 2px 2px 0 rgba(0,
+ 0,
+ 0,
+ .14),
+ 0 3px 1px -2px rgba(0,
+ 0,
+ 0,
+ .12);
+ box-shadow:0 1px 5px 0 rgba(0,
+ 0,
+ 0,
+ .2),
+ 0 2px 2px 0 rgba(0,
+ 0,
+ 0,
+ .14),
+ 0 3px 1px -2px rgba(0,
+ 0,
+ 0,
+ .12);
+ font-size:15px;
+ width:100%;
+ line-height:21px;
+ background:#fff;
+ color:#373737;
+ position:relative;
+ display:-ms-grid;
+ display:grid;
+ margin:0 auto!important;
+ -webkit-transition:.2s ease-in-out;
+ transition:.2s ease-in-out
+}
+#resume[_ngcontent-c17] {
+ max-width:800px;
+ -webkit-transition:.2s ease-in-out;
+ transition:.2s ease-in-out;
+ margin:0 auto!important;
+ padding:0
+}
+.load-spinner[_ngcontent-c17] {
+ margin:0 auto;
+ width:100%;
+ text-align:center;
+ position:absolute;
+ left:0;
+ right:0;
+ top:0;
+ bottom:0;
+ z-index:1;
+ background:#ffffffb3;
+ height:100%;
+ padding-top:25%
+}
+#cv.roboto[_ngcontent-c17] {
+ font-family:Roboto,sans-serif!important
+}
+#cv.raleway[_ngcontent-c17] {
+ font-family:Raleway,sans-serif!important
+}
+#cv.openSane[_ngcontent-c17] {
+ font-family:'Open Sans',sans-serif!important
+}
+#cv.montserrat[_ngcontent-c17] {
+ font-family:Montserrat,sans-serif!important
+}
+#cv.lato[_ngcontent-c17] {
+ font-family:Lato,sans-serif!important
+}
+#cv.times[_ngcontent-c17] {
+ font-family:'Times New Roman',Times,serif!important
+}
+#cv.verdana[_ngcontent-c17] {
+ font-family:Verdana,Geneva,Tahoma,sans-serif!important
+}
+#cv.segoui[_ngcontent-c17] {
+ font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif!important
+}
+#cv.georgia[_ngcontent-c17] {
+ font-family:Georgia,'Times New Roman',Times,serif!important
+}
+#cv.franklin[_ngcontent-c17] {
+ font-family:'Libre Franklin',sans-serif!important
+}
+#cv.lucida[_ngcontent-c17] {
+ font-family:'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif!important
+}
+#cv.cambria[_ngcontent-c17] {
+ font-family:Cambria,Cochin,Georgia,Times,'Times New Roman',serif!important
+}
+#cv.courier[_ngcontent-c17] {
+ font-family:'Courier New',Courier,monospace!important
+}
+#cv.volhov-nunito[_ngcontent-c17] {
+ font-family:Nunito,sans-serif!important
+}
+#cv.ubuntu[_ngcontent-c17] {
+ font-family:Ubuntu,sans-serif!important
+}
+#cv.nunito[_ngcontent-c17] {
+ font-family:Nunito,sans-serif!important
+}
+#cv.titillium-web[_ngcontent-c17] {
+ font-family:'Titillium Web',sans-serif!important
+}
+#cv.geo-montserrat[_ngcontent-c17] {
+ font-family:Montserrat,sans-serif!important
+}
+#cv.volhov-nunito[_ngcontent-c17]   h1[_ngcontent-c17],
+#cv.volhov-nunito[_ngcontent-c17]   h2[_ngcontent-c17],
+#cv.volhov-nunito[_ngcontent-c17]   h3[_ngcontent-c17],
+#cv.volhov-nunito[_ngcontent-c17]   h4[_ngcontent-c17],
+#cv.volhov-nunito[_ngcontent-c17]   h5[_ngcontent-c17],
+#cv.volhov-nunito[_ngcontent-c17]   h6[_ngcontent-c17] {
+ font-family:Volkhov,sans-serif!important
+}
+#cv.geo-montserrat[_ngcontent-c17]   h1[_ngcontent-c17],
+#cv.geo-montserrat[_ngcontent-c17]   h2[_ngcontent-c17],
+#cv.geo-montserrat[_ngcontent-c17]   h3[_ngcontent-c17],
+#cv.geo-montserrat[_ngcontent-c17]   h5[_ngcontent-c17],
+#cv.geo-montserrat[_ngcontent-c17]   h6[_ngcontent-c17],
+#cv.geo-montserrath4[_ngcontent-c17] {
+ font-family:Georgia,'Times New Roman',Times,serif!important
+}
+.clear[_ngcontent-c17] {
+ clear:both
+}
+.tempCv[_ngcontent-c17]   #cv[_ngcontent-c17] {
+ min-height:1100px!important
+}
+.temp11[_ngcontent-c17]   .sectionItem[_ngcontent-c17] {
+ float:left;
+ width:100%;
+ padding:20px 0 0
+}
+.temp11[_ngcontent-c17]   .mainDetails[_ngcontent-c17] {
+ position:relative;
+ z-index:2
+}
+.temp11[_ngcontent-c17]   #name[_ngcontent-c17] {
+ width:100%;
+ margin:0;
+ text-align:center;
+ float:left;
+ padding:29px 0 18px;
+ background:0 0
+}
+.temp11[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17] {
+ padding:0;
+ margin:0 0 2px;
+ font-size:38px;
+ font-weight:400;
+ color:#4f4f4f;
+ line-height:38px
+}
+.temp11[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#e77f08
+}
+.temp11[_ngcontent-c17]   a[_ngcontent-c17]:active   #name[_ngcontent-c17]   h1[_ngcontent-c17],
+.temp11[_ngcontent-c17]   a[_ngcontent-c17]:focus   #name[_ngcontent-c17]   h1[_ngcontent-c17],
+.temp11[_ngcontent-c17]   a[_ngcontent-c17]:hover   #name[_ngcontent-c17]   h1[_ngcontent-c17] {
+ border:none;
+ text-decoration:none;
+ outline:0
+}
+.temp11[_ngcontent-c17]   #name[_ngcontent-c17]   h2[_ngcontent-c17] {
+ font-size:16px;
+ margin:4px 0 10px;
+ padding:0;
+ float:left;
+ width:100%;
+ color:#6f6f6f;
+ text-transform:uppercase;
+ font-weight:700;
+ letter-spacing:1px;
+ line-height:16px
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17] {
+ padding:0;
+ position:relative;
+ float:left;
+ background:#fff;
+ width:94%;
+ margin:0 3% 10px
+}
+.temp11[_ngcontent-c17]   #headshot[_ngcontent-c17] {
+ width:12.5%;
+ float:left;
+ margin-right:30px;
+ display:none
+}
+.temp11[_ngcontent-c17]   #headshot[_ngcontent-c17]   img[_ngcontent-c17] {
+ width:100%;
+ height:auto;
+ border-radius:50px
+}
+.temp11[_ngcontent-c17]   #contactDetails[_ngcontent-c17] {
+ float:left;
+ margin:0;
+ text-align:right;
+ width:100%
+}
+.temp11[_ngcontent-c17]   #contactDetails[_ngcontent-c17]   ul[_ngcontent-c17] {
+ list-style-type:none;
+ margin:0;
+ width:100%;
+ text-align:center
+}
+.temp11[_ngcontent-c17]   #contactDetails[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ padding-bottom:3px;
+ line-height:24px;
+ display:inline;
+ margin:0 15px
+}
+.temp11[_ngcontent-c17]   .sectionItem[_ngcontent-c17]:first-child {
+ border-top:0
+}
+.temp11[_ngcontent-c17]   .sectionItem[_ngcontent-c17]:last-child {
+ padding:20px 0 10px
+}
+.temp11[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ position:relative;
+ display:inline-block;
+ left:0
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17]   a[_ngcontent-c17] {
+ width:100%
+}
+.temp11[_ngcontent-c17]   .leftArea[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17] {
+ font-size:20px;
+ text-align:left;
+ padding:0!important;
+ margin:0!important;
+ line-height:22px
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   h2[_ngcontent-c17] {
+ margin-bottom:0;
+ margin-top:6px
+}
+.temp11[_ngcontent-c17]   .subDetails[_ngcontent-c17] {
+ margin-top:2px
+}
+.temp11[_ngcontent-c17]   .keySkills[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin-bottom:3px
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17] {
+ float:left;
+ width:100%;
+ margin:3px 0 0
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   strong[_ngcontent-c17] {
+ margin-top:1px;
+ margin-right:10px;
+ float:left;
+ color:inherit
+}
+.temp11[_ngcontent-c17]   .subDetails[_ngcontent-c17] {
+ font-style:italic;
+ margin-bottom:0;
+ margin-top:2x;
+ color:inherit
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   .subDetails[_ngcontent-c17] {
+ float:left;
+ margin-bottom:0!important;
+ color:inherit
+}
+.temp11[_ngcontent-c17]   .wrapper[_ngcontent-c17] {
+ display:-webkit-box;
+ display:-ms-flexbox;
+ display:flex;
+ width:100%;
+ text-align:left;
+ margin:0;
+ padding:0
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ -webkit-box-flex:1;
+ -ms-flex-positive:1;
+ flex-grow:1;
+ border:none;
+ position:relative;
+ padding:10px 0;
+ margin:0 20px 0 0;
+ text-decoration:none;
+ border-right:0
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17] {
+ padding:10px 0;
+ margin:0;
+ width:288px;
+ display:-ms-inline-grid;
+ display:inline-grid;
+ height:100%
+}
+.gu-mirror[_ngcontent-c17],
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   div[_ngcontent-c17] {
+ -webkit-transition:opacity .4s ease-in-out;
+ transition:opacity .4s ease-in-out
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ display:block;
+ border:2px solid transparent;
+ padding:0 10px;
+ cursor:pointer
+}
+.temp11[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17] {
+ margin-bottom:25px
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17]   a[_ngcontent-c17]:hover {
+ text-decoration:none
+}
+.temp11[_ngcontent-c17]   div.sectionWrap[_ngcontent-c17]:hover {
+ border:2px dashed #bdbdbd
+}
+.temp11[_ngcontent-c17]   div.sectionWrap.active[_ngcontent-c17] {
+ border:2px dashed #e0e0e0
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17]   .sectionContent[_ngcontent-c17]:last-child {
+ margin-bottom:0!important
+}
+.temp11[_ngcontent-c17]   .mainDetails[_ngcontent-c17]   a[_ngcontent-c17]:hover {
+ text-decoration:none
+}
+.temp11[_ngcontent-c17]   .contactDetails[_ngcontent-c17]   li[_ngcontent-c17] {
+ list-style:none;
+ padding:0
+}
+.temp11[_ngcontent-c17]   .progress-bar[_ngcontent-c17] {
+ background:#e6e6e6
+}
+.temp11[_ngcontent-c17]   .progress-state[_ngcontent-c17] {
+ background:#777;
+ height:6px
+}
+.temp11[_ngcontent-c17]   a.removeSec[_ngcontent-c17] {
+ display:none
+}
+.temp11[_ngcontent-c17]   span.moveSec[_ngcontent-c17] {
+ display:none
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   ul.keySkills[_ngcontent-c17] {
+ margin-bottom:20px;
+ padding:0;
+ text-align:left
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   ul.keySkills[_ngcontent-c17]   li[_ngcontent-c17] {
+ display:-webkit-box;
+ display:-ms-flexbox;
+ display:flex;
+ width:100%;
+ line-height:18px;
+ margin:0 0 6px!important;
+ float:left
+}
+.temp11[_ngcontent-c17]   ul.contactDetails[_ngcontent-c17] {
+ margin:0
+}
+.temp11[_ngcontent-c17]   a[_ngcontent-c17] {
+ color:#555
+}
+.temp11[_ngcontent-c17]   a[_ngcontent-c17]:hover {
+ color:#555;
+ text-decoration:none
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   a[_ngcontent-c17]:hover {
+ text-decoration:none
+}
+.temp11[_ngcontent-c17]   .leftCont[_ngcontent-c17] {
+ position:absolute;
+ bottom:0;
+ top:175px;
+ width:100%
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child > .container[_ngcontent-c17] {
+ height:100vh
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child > .container[_ngcontent-c17]:first-child   ul.keySkills[_ngcontent-c17] {
+ -webkit-column-count:1;
+ column-count:1;
+ -moz-column-count:1;
+ text-align:left
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child > .container[_ngcontent-c17]   .progress-state[_ngcontent-c17] {
+ background:#989898;
+ height:6px
+}
+.temp11[_ngcontent-c17]   .mainDetails[_ngcontent-c17] > a[_ngcontent-c17] {
+ width:100%
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child > .container[_ngcontent-c17]   span.moveSec[_ngcontent-c17] {
+ color:#e8e8e8
+}
+.temp11[_ngcontent-c17]   a[_ngcontent-c17]:hover   h1[_ngcontent-c17],
+a[_ngcontent-c17]:active   h1[_ngcontent-c17],
+a[_ngcontent-c17]:focus   h1[_ngcontent-c17] {
+ text-decoration:none;
+ outline:0
+}
+.gu-mirror[_ngcontent-c17] {
+ cursor:move;
+ cursor:grab;
+ cursor:-webkit-grab;
+ -webkit-transform:scale(.65);
+ transform:scale(.65)
+}
+.temp11[_ngcontent-c17]   .mainDetails[_ngcontent-c17] {
+ border-bottom:0
+}
+ul.keySkills[_ngcontent-c17] {
+ margin-top:20px;
+ margin-bottom:0!important
+}
+ul.keySkills[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin-right:0;
+ width:100%;
+ margin-bottom:3px
+}
+.rating-title[_ngcontent-c17] {
+ width:62%;
+ float:left
+}
+.rating-container[_ngcontent-c17] {
+ vertical-align:middle
+}
+.rating.circle[_ngcontent-c17] {
+ float:left;
+ margin-bottom:5px;
+ padding-left:0;
+ position:absolute;
+ z-index:2;
+ right:0
+}
+.rating.circle[_ngcontent-c17]   span[_ngcontent-c17] {
+ float:left;
+ width:10px;
+ height:10px;
+ text-indent:-99px;
+ overflow:hidden;
+ background:#e77f08;
+ margin-right:6px;
+ border-radius:15px
+}
+.rating.circle-full[_ngcontent-c17] {
+ position:absolute;
+ z-index:1
+}
+.rating.circle-full[_ngcontent-c17]   span[_ngcontent-c17] {
+ float:left;
+ width:10px;
+ height:10px;
+ text-indent:-99px;
+ overflow:hidden;
+ background:#bbb!important;
+ margin-right:6px;
+ border-radius:15px
+}
+.sectionContent[_ngcontent-c17]   p[_ngcontent-c17] {
+ margin:0!important;
+ padding:0!important
+}
+.mainContact[_ngcontent-c17] {
+ float:left;
+ width:100%;
+ background:#4f4f4f
+}
+.mainContact[_ngcontent-c17]   ul[_ngcontent-c17] {
+ text-align:center;
+ margin:0;
+ padding:8px!important
+}
+.mainContact[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ list-style:none;
+ display:inline-block;
+ color:#e2e2e2;
+ margin:0 10px
+}
+.mainContact[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17]   i[_ngcontent-c17] {
+ margin-right:10px;
+ display:none
+}
+.svgIcon[_ngcontent-c17] {
+ margin:1px 8px 0 0;
+ float:left;
+ height:18px
+}
+.resumeSvgIcons[_ngcontent-c17] {
+ background:#e77f08;
+ height:38px;
+ width:38px;
+ text-align:center;
+ padding-top:8px;
+ border-radius:50%;
+ margin-right:8px
+}
+.resumeSvgIcons[_ngcontent-c17]   svg[_ngcontent-c17] {
+ width:20px
+}
+#cv.conSmall[_ngcontent-c17] {
+ font-size:13px!important
+}
+#cv.conMedium[_ngcontent-c17] {
+ font-size:14px!important
+}
+#cv.conLarge[_ngcontent-c17] {
+ font-size:15px!important
+}
+#cv.hedSmall[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17] {
+ font-size:16px!important
+}
+#cv.hedMedium[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17] {
+ font-size:18px!important
+}
+#cv.hedLarge[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17] {
+ font-size:22px!important
+}
+.justify[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   div[_ngcontent-c17] {
+ text-align:justify
+}
+.eduDetails[_ngcontent-c17] {
+ width:100%
+}
+span.dateSec[_ngcontent-c17] {
+ font-style:italic;
+ color:#767676;
+ font-weight:400;
+ vertical-align:baseline;
+ margin-left:15px
+}
+@media print {
+ .resumeSvgIcons[_ngcontent-c17] {
+  height:30px;
+  padding-top:8px
+ }
+ .temp11[_ngcontent-c17]   div.sectionWrap.active[_ngcontent-c17] {
+  border:2px dashed transparent
+ }
+ .temp11[_ngcontent-c17]   #name[_ngcontent-c17]   h2[_ngcontent-c17] {
+  margin:0;
+  padding:10px 0 25px
+ }
+}
+.temp11.blue[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#009bdf
+}
+.temp11.blue[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.blue[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#009bdf
+}
+.temp11.blue[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #009bdf
+}
+.temp11.orange[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#de8009
+}
+.temp11.orange[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.orange[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#de8009
+}
+.temp11.orange[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #de8009
+}
+.temp11.pink[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#f16063
+}
+.temp11.pink[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.pink[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#f16063
+}
+.temp11.pink[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #f16063
+}
+.temp11.maroon[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#b03921
+}
+.temp11.maroon[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.maroon[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#b03921
+}
+.temp11.maroon[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #b03921
+}
+.temp11.blue2[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#002e58
+}
+.temp11.blue2[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.blue2[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#002e58
+}
+.temp11.blue2[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #002e58
+}
+.temp11.blue3[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#005c85
+}
+.temp11.blue3[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.blue3[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#005c85
+}
+.temp11.blue3[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #005c85
+}
+.temp11.blue4[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#344089
+}
+.temp11.blue4[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.blue4[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#344089
+}
+.temp11.blue4[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #344089
+}
+.temp11.green[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#2cbeab
+}
+.temp11.green[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.green[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#2cbeab
+}
+.temp11.green[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #2cbeab
+}
+.temp11.black[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#000
+}
+.temp11.black[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.black[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#000
+}
+.temp11.black[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #000
+}
+.temp11.gray[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#343434
+}
+.temp11.gray[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.gray[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#343434
+}
+.temp11.gray[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #343434
+}
+.temp11.gray2[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#6f6f6f
+}
+.temp11.gray2[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.gray2[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#6f6f6f
+}
+.temp11.gray2[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #6f6f6f
+}
+.temp11.gray3[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#666
+}
+.temp11.gray3[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.gray3[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#666
+}
+.temp11.gray3[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #666
+}
+.temp11.gray4[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#2c2c2c
+}
+.temp11.gray4[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.gray4[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#2c2c2c
+}
+.temp11.gray4[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #2c2c2c
+}
+.temp11.gray5[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#454c57
+}
+.temp11.gray5[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.gray5[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#454c57
+}
+.temp11.gray5[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #454c57
+}
+.temp11.olive[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#628935
+}
+.temp11.olive[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.olive[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#628935
+}
+.temp11.olive[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #628935
+}
+.temp11.cyan[_ngcontent-c17]   #name[_ngcontent-c17]   h1[_ngcontent-c17]   span[_ngcontent-c17] {
+ font-weight:bolder;
+ color:#028bb6
+}
+.temp11.cyan[_ngcontent-c17]   .rating.circle[_ngcontent-c17]   span[_ngcontent-c17],
+.temp11.cyan[_ngcontent-c17]   .resumeSvgIcons[_ngcontent-c17] {
+ background:#028bb6
+}
+.temp11.cyan[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ border-bottom:2px solid #028bb6
+}
+.sectionContent[_ngcontent-c17]   article[_ngcontent-c17] {
+ margin-bottom:15px;
+ padding:0!important
+}
+.sectionContent[_ngcontent-c17]   article[_ngcontent-c17]:last-child {
+ margin-bottom:15px
+}
+.sectionContent[_ngcontent-c17]   article[_ngcontent-c17]   p[_ngcontent-c17] {
+ padding:0!important;
+ margin:0!important
+}
+.secCol1[_ngcontent-c17] {
+ height:auto
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul.lang[_ngcontent-c17] {
+ padding:0 0 10px;
+ line-height:normal
+}
+.sectionContent[_ngcontent-c17]   article[_ngcontent-c17]   .secCol1[_ngcontent-c17]   p[_ngcontent-c17] {
+ float:left
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul.lang[_ngcontent-c17]   .rating-title[_ngcontent-c17] {
+ margin-bottom:2px;
+ padding:0
+}
+.secHolder[_ngcontent-c17] {
+ float:left;
+ height:100px;
+ width:100%;
+ background:#e8e8e8;
+ margin-bottom:20px!important
+}
+.temp11[_ngcontent-c17]   div.sectionWrap[_ngcontent-c17]:hover   a.removeSec[_ngcontent-c17] {
+ display:block;
+ float:right;
+ position:absolute;
+ width:20px;
+ z-index:2;
+ cursor:pointer;
+ height:20px;
+ background:#c7c7c7;
+ text-align:center;
+ color:#565656;
+ font-size:12px;
+ line-height:23px
+}
+.temp11[_ngcontent-c17]   div.sectionWrap[_ngcontent-c17]:hover   span.moveSec[_ngcontent-c17] {
+ position:absolute;
+ width:20px;
+ height:20px;
+ display:block;
+ cursor:all-scroll;
+ background:#c7c7c7;
+ text-align:center;
+ color:#565656;
+ font-size:12px;
+ line-height:22px;
+ right:34px;
+ top:0
+}
+.temp11[_ngcontent-c17]   .contactLinks[_ngcontent-c17]   .svgIcon[_ngcontent-c17] {
+ position:absolute;
+ right:1px;
+ top:0
+}
+.temp11[_ngcontent-c17]   span.svgIcon[_ngcontent-c17]   svg[_ngcontent-c17] {
+ position:relative;
+ top:0;
+ width:14px
+}
+.temp11[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   .twoCol[_ngcontent-c17] {
+ display:block
+}
+.temp11[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   .twoCol[_ngcontent-c17]   .leftCol[_ngcontent-c17] {
+ width:32%;
+ margin-right:0;
+ float:right
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   span.dateSec[_ngcontent-c17],
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   strong[_ngcontent-c17] {
+ font-weight:700;
+ line-height:normal;
+ font-size:12px!important
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   .sectionContent[_ngcontent-c17] {
+ padding-bottom:0
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   article[_ngcontent-c17] {
+ float:left;
+ width:100%;
+ padding:0!important
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   article[_ngcontent-c17]:last-child {
+ margin-bottom:0!important
+}
+.temp11[_ngcontent-c17]   .sectionContent.textarea[_ngcontent-c17]   article[_ngcontent-c17]   p[_ngcontent-c17]   ul[_ngcontent-c17] {
+ float:left;
+ margin:0!important;
+ padding:0 0 0 25px!important
+}
+.temp11[_ngcontent-c17]   .sectionContent.textarea[_ngcontent-c17]   article[_ngcontent-c17]   p[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin:0!important;
+ line-height:21px
+}
+.temp11[_ngcontent-c17]   .keySkills[_ngcontent-c17] {
+ list-style-type:none;
+ margin:0 0 20px;
+ font-size:inherit;
+ padding:0;
+ line-height:30px;
+ text-align:left
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   ul.keySkills[_ngcontent-c17]   li[_ngcontent-c17] {
+ padding:0;
+ line-height:18px;
+ width:100%;
+ margin:0 0 6px!important;
+ float:left
+}
+.temp11[_ngcontent-c17]   .sectionTitle[_ngcontent-c17] {
+ float:left;
+ width:100%;
+ padding:15px 0 4px;
+ margin-bottom:4px!important;
+ border-bottom:none!important
+}
+.temp11[_ngcontent-c17]   .sectionTitle[_ngcontent-c17]   h1[_ngcontent-c17] {
+ text-transform:uppercase;
+ font-size:14px;
+ text-align:left;
+ padding:0!important;
+ margin:0 0 6px!important;
+ line-height:22px;
+ background:#e6e6e6;
+ border-radius:50px
+}
+.temp11[_ngcontent-c17]   .contactDetails[_ngcontent-c17]   ul[_ngcontent-c17] {
+ margin:0!important;
+ padding:0!important
+}
+.temp11[_ngcontent-c17]   .contactDetails[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin:0 0 3px;
+ font-size:inherit
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17]:last-child {
+ margin-bottom:0!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   ul[_ngcontent-c17] {
+ margin:0!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   ul.keySkills[_ngcontent-c17]   li[_ngcontent-c17]   .rating-container[_ngcontent-c17] {
+ left:0
+}
+.temp11[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   .sectionWrap[_ngcontent-c17] {
+ width:100%
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul[_ngcontent-c17] {
+ float:left;
+ width:100%
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17] {
+ text-align:left;
+ float:left;
+ position:relative;
+ padding-bottom:0;
+ left:20px;
+ width:93%
+}
+.mainSection[_ngcontent-c17] {
+ display:inline-block;
+ width:100%
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   .mainSection[_ngcontent-c17] {
+ margin:0!important;
+ padding:0!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   div.contentSec[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ float:left;
+ width:100%;
+ margin:10px 0 0
+}
+.rating-container[_ngcontent-c17] {
+ padding-top:6px;
+ float:left;
+ position:relative;
+ width:38%;
+ top:5px
+}
+ul.bulletPoints[_ngcontent-c17] {
+ padding:0;
+ margin:0!important
+}
+ul.bulletPoints[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin-left:18px;
+ margin-bottom:5px!important
+}
+ul.bulletPoints[_ngcontent-c17]   li[_ngcontent-c17]:last-child {
+ margin-bottom:0!important
+}
+.temp11[_ngcontent-c17]   .rating-title[_ngcontent-c17] {
+ text-align:left!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   ul.keySkills[_ngcontent-c17]   li[_ngcontent-c17]   .progress-bar[_ngcontent-c17] {
+ width:90%
+}
+div#name.withPhoto[_ngcontent-c17] {
+ float:left!important;
+ width:74%!important;
+ text-align:left!important;
+ padding-left:20px!important
+}
+.temp11[_ngcontent-c17]   #photo[_ngcontent-c17]   img[_ngcontent-c17] {
+ width:100%;
+ border-radius:50%;
+ overflow:hidden;
+ border:2px solid #c3c3c3
+}
+.temp11[_ngcontent-c17]   #photo[_ngcontent-c17] {
+ float:left;
+ width:100px;
+ margin:17px 0 12px 30px
+}
+.temp11[_ngcontent-c17]   #oimg[_ngcontent-c17] {
+ display:none
+}
+.mainDetails.mainHeader[_ngcontent-c17] {
+ margin-top:10px
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   #summary[_ngcontent-c17]   ul[_ngcontent-c17] {
+ list-style-position:outside;
+ padding:0 0 0 25px!important;
+ float:left
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   #summary[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin-bottom:2px
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   ul[_ngcontent-c17] {
+ padding:0!important
+}
+.temp11[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   .sectionContent[_ngcontent-c17] {
+ float:left;
+ width:87%
+}
+.temp11[_ngcontent-c17]   .container[_ngcontent-c17]:last-child   .sectionContent[_ngcontent-c17]   h2[_ngcontent-c17] {
+ letter-spacing:0!important;
+ float:left;
+ width:100%
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   strong[_ngcontent-c17] {
+ width:auto
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   strong[_ngcontent-c17]   .dateSec[_ngcontent-c17] {
+ float:right
+}
+.temp11[_ngcontent-c17]   .eduCompany[_ngcontent-c17]   span.dateSec[_ngcontent-c17] > span[_ngcontent-c17] {
+ display:initial
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   .sectionContent.textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin:0!important;
+ padding:0!important
+}
+@media print {
+ #cv[_ngcontent-c17] {
+  min-height:830px
+ }
+ .temp11[_ngcontent-c17]   #pimg[_ngcontent-c17] {
+  display:none
+ }
+ .temp11[_ngcontent-c17]   #oimg[_ngcontent-c17] {
+  display:block
+ }
+ .temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   ul[_ngcontent-c17] {
+  float:initial!important;
+  width:initial!important;
+  margin:0!important;
+  padding:0 0 0 20px!important
+ }
+ .temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child   ul[_ngcontent-c17]   ul[_ngcontent-c17] {
+  margin:0!important;
+  padding:0 0 0 25px!important
+ }
+ .temp11[_ngcontent-c17]   #name[_ngcontent-c17] {
+  position:relative;
+  top:12px
+ }
+ .temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17] {
+  margin-bottom:0
+ }
+ .temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17],
+ .temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+  margin-bottom:0!important;
+  padding-bottom:0!important
+ }
+}
+.temp11[_ngcontent-c17]   div.sectionWrap[_ngcontent-c17]:hover   a.removeSec[_ngcontent-c17] {
+ right:8px;
+ top:0
+}
+.temp11.colSwap1[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ -webkit-box-ordinal-group:3;
+ -ms-flex-order:2;
+ order:2;
+ padding-right:0
+}
+.temp11.colSwap1[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:last-child {
+ -webkit-box-ordinal-group:2;
+ -ms-flex-order:1;
+ order:1;
+ padding-right:25px
+}
+.temp11.colResize[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17] {
+ width:38%
+}
+.temp11.colResize[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ width:62%
+}
+.temp11.colResize1[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17] {
+ width:40%
+}
+.temp11.colResize1[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ width:60%
+}
+.temp11.colResize2[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17] {
+ width:42%
+}
+.temp11.colResize2[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ width:58%
+}
+.temp11.colResize3[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17] {
+ width:44%
+}
+.temp11.colResize3[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ width:56%
+}
+.temp11.colResize4[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17],
+.temp11.colResize4[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ width:50%
+}
+.temp11[_ngcontent-c17]   .mainDetails.mainHeader[_ngcontent-c17] {
+ margin-top:0;
+ float:left;
+ width:100%
+}
+.sectionContent[_ngcontent-c17]   article[_ngcontent-c17]:last-child   p[_ngcontent-c17],
+.temp11[_ngcontent-c17]   div[_ngcontent-c17]   p[_ngcontent-c17] {
+ padding:0!important;
+ margin:0 0 7px!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul[_ngcontent-c17],
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul.keySkills[_ngcontent-c17],
+.temp11[_ngcontent-c17]   div[_ngcontent-c17]   ul[_ngcontent-c17] {
+ margin:0 0 7px!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17]   ol[_ngcontent-c17],
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17]   ul[_ngcontent-c17] {
+ margin-bottom:0!important
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   article[_ngcontent-c17] {
+ margin-bottom:0
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-bottom:0
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   div[_ngcontent-c17]   .eduCompany[_ngcontent-c17] {
+ margin-bottom:-3px!important
+}
+.temp11[_ngcontent-c17]   div.sectionWrap[_ngcontent-c17] {
+ position:relative;
+ width:100%;
+ padding:0 10px;
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   div[_ngcontent-c17]   .sectionContent[_ngcontent-c17] {
+ padding-bottom:0!important
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   article[_ngcontent-c17] {
+ margin-bottom:7px!important
+}
+.temp11[_ngcontent-c17]   .sectionWrap[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   article[_ngcontent-c17]:last-child {
+ margin-bottom:0!important
+}
+.temp11[_ngcontent-c17]   .mainContact[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin:3px 8px!important
+}
+.temp11[_ngcontent-c17]   .mainDetails[_ngcontent-c17] {
+ padding:8px 0 10px
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17],
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]:first-child {
+ margin-bottom:0!important;
+ padding-bottom:0!important
+}
+.mainContact[_ngcontent-c17],
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17] {
+ margin-bottom:0
+}
+@media print {
+ .temp11[_ngcontent-c17]   #name[_ngcontent-c17] {
+  padding:24px 0 16px
+ }
+ .temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17],
+ .temp11[_ngcontent-c17]   .wrapper[_ngcontent-c17] {
+  height:930px
+ }
+ .temp11[_ngcontent-c17]   .mainDetails[_ngcontent-c17] {
+  padding:2px 0 10px
+ }
+}
+.temp11[_ngcontent-c17]   #photo.circle[_ngcontent-c17]   img[_ngcontent-c17] {
+ border-radius:50%;
+ overflow:hidden;
+ -webkit-transition:.5s;
+ transition:.5s
+}
+.temp11[_ngcontent-c17]   #photo.circle-side[_ngcontent-c17]   img[_ngcontent-c17] {
+ border-radius:50% 50% 10px;
+ overflow:hidden;
+ -webkit-transition:.5s;
+ transition:.5s
+}
+.temp11[_ngcontent-c17]   #photo.square[_ngcontent-c17]   img[_ngcontent-c17] {
+ border-radius:0;
+ overflow:hidden;
+ -webkit-transition:.5s;
+ transition:.5s
+}
+.temp11[_ngcontent-c17]   #photo.square-rounded[_ngcontent-c17]   img[_ngcontent-c17] {
+ border-radius:10px;
+ overflow:hidden;
+ -webkit-transition:.5s;
+ transition:.5s
+}
+.rk-circles[_ngcontent-c17]   .ring[_ngcontent-c17],
+.rk-square[_ngcontent-c17]   .ring[_ngcontent-c17] {
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box
+}
+.rk-circles[_ngcontent-c17] {
+ display:-webkit-inline-box;
+ display:-ms-inline-flexbox;
+ display:inline-flex;
+ margin:0;
+ padding:0;
+ float:right;
+ width:auto
+}
+.ring[_ngcontent-c17] {
+ position:relative;
+ display:inline-block;
+ width:12px;
+ height:12px;
+ padding:2px;
+ border-radius:50%;
+ list-style:none;
+ overflow:hidden;
+ margin-right:7px;
+ margin-bottom:0!important
+}
+.ring[_ngcontent-c17]:last-child {
+ margin-right:0
+}
+.ring.full-ring[_ngcontent-c17]:before {
+ content:'';
+ display:inline-block;
+ width:100%;
+ height:100%;
+ border-radius:50%;
+ vertical-align:top
+}
+.ring[_ngcontent-c17]:after {
+ content:'';
+ position:absolute;
+ border:1px solid #fff;
+ border-radius:50%;
+ top:0;
+ left:0;
+ border:none;
+ width:5px;
+ height:5px
+}
+.rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17] {
+ padding:0
+}
+.rating-circle2[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17] {
+ border:none
+}
+.rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17]:after {
+ width:100%;
+ height:100%;
+ border:none
+}
+.rating-circle3[_ngcontent-c17]   .ring[_ngcontent-c17] {
+ padding:0;
+ border:none
+}
+.rating-circle3[_ngcontent-c17]   .ring[_ngcontent-c17]:after {
+ width:100%;
+ height:100%;
+ border:none
+}
+.rk-square[_ngcontent-c17]   .ring[_ngcontent-c17] {
+ padding:0;
+ border:none;
+ border-radius:2px
+}
+.rk-square[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ border-radius:2px
+}
+.rk-square[_ngcontent-c17]   .ring[_ngcontent-c17]:after {
+ width:100%;
+ height:100%;
+ border:none
+}
+.rk-square.dimond[_ngcontent-c17]   .ring[_ngcontent-c17] {
+ border-radius:0;
+ -webkit-transform:rotateZ(45deg);
+ transform:rotateZ(45deg)
+}
+.rk-square.dimond[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ border-radius:0
+}
+.rk-bar[_ngcontent-c17] {
+ width:100%;
+ background-color:#dbded5;
+ text-align:center;
+ color:#fff
+}
+.bar-progress[_ngcontent-c17] {
+ width:0%;
+ height:10px;
+ background-color:#6d6d6c
+}
+.rk-bar.rating-bar2[_ngcontent-c17] {
+ border-radius:10px;
+ overflow:hidden
+}
+.rk-bar.rating-bar3[_ngcontent-c17] {
+ border-radius:10px;
+ overflow:hidden;
+ border:1pt solid #6d6d6c;
+ background:0 0;
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box
+}
+.rating-bar3[_ngcontent-c17]   .bar-progress[_ngcontent-c17] {
+ height:7px
+}
+.rk-bar.rating-bar4[_ngcontent-c17] {
+ overflow:hidden;
+ border:1pt solid #6d6d6c;
+ background:0 0;
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box
+}
+.rating-bar4[_ngcontent-c17]   .bar-progress[_ngcontent-c17] {
+ height:8px
+}
+.rk-bar.rating-bar5[_ngcontent-c17] {
+ overflow:hidden;
+ border:none;
+ background:0 0;
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box;
+ position:relative
+}
+.rk-bar.rating-bar5[_ngcontent-c17]:before {
+ content:'';
+ position:absolute;
+ top:2px;
+ height:4px;
+ left:0;
+ right:0;
+ z-index:0
+}
+.rating-bar5[_ngcontent-c17]   .bar-progress[_ngcontent-c17] {
+ height:8px;
+ position:relative;
+ z-index:1
+}
+.rk-circles.rating-circle2[_ngcontent-c17]   .full-ring[_ngcontent-c17] {
+ border:none!important
+}
+.rating-bar1[_ngcontent-c17],
+.rating-bar2[_ngcontent-c17],
+.rating-circle3[_ngcontent-c17]   .ring[_ngcontent-c17],
+.rk-bar.rating-bar5[_ngcontent-c17]:before,
+.rk-square[_ngcontent-c17]   .ring[_ngcontent-c17] {
+ background:#d1d1d1!important
+}
+.temp11[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#e77f08
+}
+.temp11[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #e77f08
+}
+.temp11[_ngcontent-c17]   .rating-container[_ngcontent-c17] {
+ width:45%;
+ padding-top:3px;
+ top:2px;
+ text-align:left
+}
+.temp11[_ngcontent-c17]   .bar-progress[_ngcontent-c17] {
+ height:8px!important
+}
+.temp11[_ngcontent-c17]   .rating-bar3[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11[_ngcontent-c17]   .rating-bar4[_ngcontent-c17]   .bar-progress[_ngcontent-c17] {
+ height:6px!important
+}
+.temp11[_ngcontent-c17]   ul.keySkills[_ngcontent-c17]   li[_ngcontent-c17] {
+ display:-webkit-box!important;
+ display:-ms-flexbox!important;
+ display:flex!important
+}
+.temp11.gray4[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.gray4[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#2c2c2c
+}
+.temp11.gray4[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.gray4[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.gray4[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.gray4[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #2c2c2c
+}
+.temp11.cyan[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.cyan[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#028bb6
+}
+.temp11.cyan[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.cyan[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.cyan[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.cyan[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #028bb6
+}
+.temp11.gray3[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.gray3[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#666
+}
+.temp11.gray3[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.gray3[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.gray3[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.gray3[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #666
+}
+.temp11.blue[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.blue[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#03a9f4
+}
+.temp11.blue[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.blue[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #03a9f4
+}
+.temp11.orange[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.orange[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#de8009
+}
+.temp11.orange[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.orange[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.orange[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.orange[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #de8009
+}
+.temp11.pink[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.pink[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#f16063
+}
+.temp11.pink[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.pink[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.pink[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.pink[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #f16063
+}
+.temp11.maroon[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.maroon[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#b03921
+}
+.temp11.maroon[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.maroon[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.maroon[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.maroon[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #b03921
+}
+.temp11.blue2[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.blue2[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#002e58
+}
+.temp11.blue2[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue2[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue2[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.blue2[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #002e58
+}
+.temp11.blue3[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.blue3[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#005c85
+}
+.temp11.blue3[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue3[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue3[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.blue3[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #005c85
+}
+.temp11.blue4[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.blue4[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#344089
+}
+.temp11.blue4[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue4[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.blue4[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.blue4[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #344089
+}
+.temp11.green[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.green[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#2cbeab
+}
+.temp11.green[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.green[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.green[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.green[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #2cbeab
+}
+.temp11.olive[_ngcontent-c17]   .bar-progress[_ngcontent-c17],
+.temp11.olive[_ngcontent-c17]   .ring.full-ring[_ngcontent-c17]:before {
+ background:#628935
+}
+.temp11.olive[_ngcontent-c17]   .rating-circle1[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.olive[_ngcontent-c17]   .rating-circle2[_ngcontent-c17]   .ring[_ngcontent-c17],
+.temp11.olive[_ngcontent-c17]   .rk-bar.rating-bar3[_ngcontent-c17],
+.temp11.olive[_ngcontent-c17]   .rk-bar.rating-bar4[_ngcontent-c17] {
+ border:1pt solid #628935
+}
+.temp11[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin-bottom:0!important
+}
+article[_ngcontent-c17]   ul[_ngcontent-c17] {
+ list-style-position:outside;
+ padding:0 0 0 25px!important
+}
+article[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ margin-bottom:0!important
+}
+#cv.line17[_ngcontent-c17],
+#cv.line17[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:17px!important
+}
+#cv.line18[_ngcontent-c17],
+#cv.line18[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:18px!important
+}
+#cv.line19[_ngcontent-c17],
+#cv.line19[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:19px!important
+}
+#cv.line20[_ngcontent-c17],
+#cv.line20[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:20px!important
+}
+#cv.line21[_ngcontent-c17],
+#cv.line21[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:21px!important
+}
+#cv.line22[_ngcontent-c17],
+#cv.line22[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:22px!important
+}
+.temp11[_ngcontent-c17]   #mainArea[_ngcontent-c17]   .container[_ngcontent-c17]   div[_ngcontent-c17] {
+ margin:0;
+ padding:0!important
+}
+.secSpace-5[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:-5px!important
+}
+.secSpace0[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:0!important
+}
+.secSpace5[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:5px!important
+}
+.secSpace10[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:10px!important
+}
+.secSpace15[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:15px!important
+}
+.secSpace20[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:20px!important
+}
+.secSpace25[_ngcontent-c17]   .sectionWrap[_ngcontent-c17] {
+ margin-top:25px!important
+}
+#cv.line16[_ngcontent-c17],
+#cv.line16[_ngcontent-c17]   .textarea[_ngcontent-c17]   ul[_ngcontent-c17]   li[_ngcontent-c17] {
+ line-height:15.5px!important
+}
+.temp11[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   h2[_ngcontent-c17] {
+ font-size:15px
+}
+.sectionContent[_ngcontent-c17]   table[_ngcontent-c17] {
+ border-collapse:collapse!important;
+ border:1px solid #d8d8d8
+}
+.sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   td[_ngcontent-c17],
+.sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   th[_ngcontent-c17] {
+ padding-left:10px!important;
+ color:#212529!important
+}
+#cv.conSmall[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   td[_ngcontent-c17],
+#cv.conSmall[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   th[_ngcontent-c17] {
+ font-size:12px!important
+}
+#cv.conMedium[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   td[_ngcontent-c17],
+#cv.conMedium[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   th[_ngcontent-c17] {
+ font-size:13.2px!important
+}
+#cv.conLarge[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   td[_ngcontent-c17],
+#cv.conLarge[_ngcontent-c17]   .sectionContent[_ngcontent-c17]   table[_ngcontent-c17]   tr[_ngcontent-c17]   th[_ngcontent-c17] {
+ font-size:14px!important
+}

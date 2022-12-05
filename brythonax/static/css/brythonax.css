@@ -13,6 +13,38 @@
 --clear-3: #C6C6B7;
 }
 
+#main-nav {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 20px;
+}
+
+#home-div {
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-left: 3em;
+}
+
+.sel_lang {
+    float: right;
+}
+
+#home-btn {
+    color: white;
+    background-color: #059862;
+    border: 1px solid #ccc;
+    border-color: #04AA6D;
+    box-shadow: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 5px;
+    outline-width: 0;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:0.8em;
+}
+
 #div_language {
     position: relative;
     display: inline-block;
