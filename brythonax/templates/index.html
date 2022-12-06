@@ -40,7 +40,7 @@ h1{
         <p>Here is the <a href="{{ url_for('brythonax.doc') }}">document</a> and <a href="{{ url_for('brythonax.demo',lan='en') }}">demos</a> of Brython. With Brython, we can execute Python scripts directly in html pages.</p>
         <p>Also, I started doing exercises on LeetCode, here is <a href="{{ url_for('brythonax.leetcode') }}">my codes</a>, hope I can stick with it.</p>
         <br>
-        <p>I am currently looking for a job and here is my <a href="{{ url_for('brythonax.cv') }}">resume</a>.</p>
+        {% comment %} <p>I am currently looking for a job and here is my <a href="{{ url_for('brythonax.cv') }}">resume</a>.</p> {% endcomment %}
         <p>Webmaster: Andreevsky, and his brave friend Mona</p>
     </div>
     <div class="lan cn">
@@ -49,7 +49,7 @@ h1{
         <p>此外，我开始在 LeetCode 上做练习，这是 <a href="{{ url_for('brythonax.leetcode') }}">我的代码</a> ，希望我能坚持下去。</p>
         <br>
         <p>这个网站属于兴趣制作，消磨时间。</p>
-        <p>我目前正在找工作，这里是我的<a href="{{ url_for('brythonax.cv') }}">简历</a>。</p>
+        {% comment %} <p>我目前正在找工作，这里是我的<a href="{{ url_for('brythonax.cv') }}">简历</a>。</p> {% endcomment %}
         <p>站长：安德烈夫斯基 和他勇敢的朋友 Mona</p>
     </div>
     <img src="{{ url_for('static', filename='mona.jpg') }}" alt="Mona Icon">

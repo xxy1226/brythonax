@@ -34,6 +34,10 @@ def leetcode():
 def cv():
     return render_template('cv/cv.html')
 
+@bp.route('/resume')
+def resume():
+    return render_template('cv/resume.html')
+
 @bp.route('/unleetcode')
 def unleetcode():
     return render_template('unLeetCode.html')
